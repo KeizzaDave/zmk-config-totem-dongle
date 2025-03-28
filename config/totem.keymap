@@ -14,11 +14,8 @@
 #include <dt-bindings/zmk/keys.h>
 #include <dt-bindings/zmk/pointing.h>
 
-
-
 #define ZMK_POINTING_DEFAULT_MOVE_VAL 800  // default: 600
 #define ZMK_POINTING_DEFAULT_SCRL_VAL 15    // default: 10
-
 #define BASE 0
 #define NAV  1
 #define SYM  2
@@ -82,10 +79,10 @@
             //                                     ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛   ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛
 
             bindings = <
-                  &kp Q  &kp Y     &kp O         &kp X       &kp J             &kp G      &kp W  &kp D          &kp L  &kp P
-                  &kp H  &kp I     &kp E         &kp A       &kp U             &kp M      &kp T  &kp S          &kp R  &kp N
-&kp LEFT_CONTROL  &kp K  &kp SEMI  &kp APOS      &kp PERIOD  &kp COMMA         &kp B      &kp V  &kp F          &kp C  &kp Z  &kp BACKSPACE
-                                   &kp LEFT_GUI  &sl 1       &kp LEFT_SHIFT    &kp SPACE  &sl 2  &kp RIGHT_ALT
+                       &kp Q  &kp Y     &kp O         &kp X       &kp J             &kp G      &kp W  &kp D          &kp L  &kp P
+                       &kp H  &kp I     &kp E         &kp A       &kp U             &kp M      &kp T  &kp S          &kp R  &kp N
+&mt CAPS LEFT_CONTROL  &kp K  &kp SEMI  &kp APOS      &kp PERIOD  &kp COMMA         &kp B      &kp V  &kp F          &kp C  &kp Z  &kp BACKSPACE
+                                        &kp LEFT_GUI  &sl 1       &kp LEFT_SHIFT    &kp SPACE  &sl 2  &kp RIGHT_ALT
             >;
         };
 
