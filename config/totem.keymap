@@ -10,12 +10,11 @@
 //
 // ▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄
 
+#include <behaviors/mouse_keys.dtsi>
+#include <dt-bindings/zmk/mouse.h>
 #include <behaviors.dtsi>
 #include <dt-bindings/zmk/keys.h>
 #include <dt-bindings/zmk/pointing.h>
-#include <behaviors/mouse_keys.dtsi>
-
-#include <dt-bindings/zmk/mouse.h>
 
 #define ZMK_POINTING_DEFAULT_MOVE_VAL 800  // default: 600
 #define ZMK_POINTING_DEFAULT_SCRL_VAL 15    // default: 10
@@ -160,9 +159,9 @@
             //                                     ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛   ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛
 
             bindings = <
-        &sys_reset   &trans  &trans  &trans  &trans    &kp K_POWER  &trans             &trans                &trans       &trans
-        &bootloader  &trans  &trans  &trans  &trans    &trans       &kp C_VOLUME_UP    &kp C_BRIGHTNESS_INC  &kp K_SLEEP  &trans
-&trans  &trans       &trans  &trans  &trans  &trans    &trans       &kp C_VOLUME_DOWN  &kp C_BRIGHTNESS_DEC  &trans       &trans  &trans
+        &sys_reset   &trans  &trans  &trans  &trans    &kp C_POWER  &trans             &trans                &trans            &trans
+        &bootloader  &trans  &trans  &trans  &trans    &trans       &kp C_VOLUME_UP    &kp C_BRIGHTNESS_INC  &kp C_SLEEP_MODE  &trans
+&trans  &trans       &trans  &trans  &trans  &trans    &trans       &kp C_VOLUME_DOWN  &kp C_BRIGHTNESS_DEC  &trans            &trans  &trans
                              &trans  &trans  &trans    &trans       &trans             &trans
             >;
         };
