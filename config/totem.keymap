@@ -47,6 +47,12 @@
             key-positions = <13 12>;
             timeout-ms = <30>;
         };
+
+        option {
+            bindings = <&mo 3>;
+            key-positions = <22 23 24 21>;
+            timeout-ms = <100>;
+        };
     };
 
     keymap {
@@ -153,15 +159,6 @@
         &bootloader  &trans  &trans  &trans  &trans    &trans       &kp C_VOLUME_UP    &kp C_BRIGHTNESS_INC  &kp K_SLEEP  &trans
 &trans  &trans       &trans  &trans  &trans  &trans    &trans       &kp C_VOLUME_DOWN  &kp C_BRIGHTNESS_DEC  &trans       &trans  &trans
                              &trans  &trans  &trans    &trans       &trans             &trans
-            >;
-        };
-
-        layer_4 {
-            bindings = <
-        &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans
-        &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
-                        &trans  &trans  &trans    &trans  &trans  &trans
             >;
         };
     };
