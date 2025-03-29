@@ -59,6 +59,15 @@
         };
     };
 
+    behaviors {
+        CTRL_CAPS: CTRL_CAPS {
+            compatible = "zmk,behavior-tap-dance";
+            label = "CTRL_CAPS";
+            #binding-cells = <0>;
+            bindings = <&kp LEFT_CONTROL>, <&kp CAPSLOCK>;
+        };
+    };
+
     keymap {
         compatible = "zmk,keymap";
 
@@ -81,10 +90,10 @@
             //                                     ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛   ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛
 
             bindings = <
-                       &kp Q  &kp Y     &kp O         &kp X       &kp J             &kp G      &kp W  &kp D          &kp L  &kp P
-                       &kp H  &kp I     &kp E         &kp A       &kp U             &kp M      &kp T  &kp S          &kp R  &kp N
-&mt CAPS LEFT_CONTROL  &kp K  &kp SEMI  &kp APOS      &kp PERIOD  &kp COMMA         &kp B      &kp V  &kp F          &kp C  &kp Z  &kp BACKSPACE
-                                        &kp LEFT_GUI  &sl 1       &kp LEFT_SHIFT    &kp SPACE  &sl 2  &kp RIGHT_ALT
+            &kp Q  &kp Y     &kp O         &kp X       &kp J             &kp G      &kp W  &kp D          &kp L  &kp P
+            &kp H  &kp I     &kp E         &kp A       &kp U             &kp M      &kp T  &kp S          &kp R  &kp N
+&CTRL_CAPS  &kp K  &kp SEMI  &kp APOS      &kp PERIOD  &kp COMMA         &kp B      &kp V  &kp F          &kp C  &kp Z  &kp BACKSPACE
+                             &kp LEFT_GUI  &sl 1       &kp LEFT_SHIFT    &kp SPACE  &sl 2  &kp RIGHT_ALT
             >;
         };
 
