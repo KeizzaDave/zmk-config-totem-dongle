@@ -45,7 +45,7 @@
 
         esc {
             timeout-ms = <30>;
-            key-positions = <1 2 3>;
+            key-positions = <2 3>;
             bindings = <&kp ESC>;
         };
 
@@ -63,13 +63,19 @@
 
         option {
             bindings = <&mo 7>;
-            key-positions = <22 23 24 21>;
+            key-positions = <22 23 24>;
             timeout-ms = <100>;
         };
 
         Bluetooth {
             bindings = <&mo 8>;
             key-positions = <0 1 2 3>;
+            timeout-ms = <100>;
+        };
+
+        Option_2 {
+            bindings = <&mo 7>;
+            key-positions = <29 28 27>;
             timeout-ms = <100>;
         };
     };
@@ -217,10 +223,10 @@
             //                                     ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛   ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛
 
             bindings = <
-        &trans  &trans    &out OUT_TOG  &trans           &trans    &tog 0           &tog 1             &tog 2                &tog 3          &tog 4
-        &trans  &kp HOME  &kp INS       &kp PRINTSCREEN  &trans    &kp C_MUTE       &kp C_VOLUME_UP    &kp C_BRIGHTNESS_INC  &kp C_PAUSE     &kp C_NEXT
-&trans  &trans  &trans    &trans        &trans           &trans    &kp PAUSE_BREAK  &kp C_VOLUME_DOWN  &kp C_BRIGHTNESS_DEC  &kp C_PREVIOUS  &trans      &trans
-                          &trans        &trans           &trans    &trans           &trans             &trans
+        &trans  &trans    &out OUT_TOG  &trans           &trans    &tog 0          &tog 1             &tog 2                &tog 3       &tog 4
+        &trans  &kp HOME  &kp INS       &kp PRINTSCREEN  &trans    &kp C_PREVIOUS  &kp C_VOLUME_UP    &kp C_BRIGHTNESS_INC  &kp C_PAUSE  &kp C_NEXT
+&trans  &trans  &trans    &trans        &trans           &trans    &kp C_MUTE      &kp C_VOLUME_DOWN  &kp C_BRIGHTNESS_DEC  &trans       &trans      &trans
+                          &trans        &trans           &trans    &trans          &trans             &trans
             >;
         };
 
