@@ -32,10 +32,12 @@
     tapping-term-ms = <170>;
 };
 
-&sk { quick-release; };
-
-&sl {
+&sk {
+    quick-release;
+    release-after-ms = <1>;
 };
+
+&sl { release-after-ms = <1>; };
 
 / {
     combos {
