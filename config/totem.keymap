@@ -66,27 +66,27 @@
 
         Paste {
             bindings = <&kp LC(V)>;
-            key-positions = <34 24>;
+            key-positions = <23 25>;
         };
 
         Copy {
             bindings = <&kp LC(C)>;
-            key-positions = <34 23>;
+            key-positions = <23 24>;
         };
 
         Cut {
             bindings = <&kp LC(X)>;
-            key-positions = <34 22>;
+            key-positions = <22 23>;
         };
 
         Undo {
             bindings = <&kp LC(Z)>;
-            key-positions = <34 21>;
+            key-positions = <21 22>;
         };
 
         Select_All {
             bindings = <&kp LC(A)>;
-            key-positions = <34 10>;
+            key-positions = <11 12>;
         };
     };
 
