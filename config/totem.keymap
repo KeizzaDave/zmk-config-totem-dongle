@@ -62,31 +62,7 @@
         Bluetooth {
             bindings = <&mo 7>;
             key-positions = <0 1 2 3>;
-        };
-
-        Paste {
-            bindings = <&kp LC(V)>;
-            key-positions = <23 25>;
-        };
-
-        Copy {
-            bindings = <&kp LC(C)>;
-            key-positions = <23 24>;
-        };
-
-        Cut {
-            bindings = <&kp LC(X)>;
-            key-positions = <22 23>;
-        };
-
-        Undo {
-            bindings = <&kp LC(Z)>;
-            key-positions = <21 22>;
-        };
-
-        Select_All {
-            bindings = <&kp LC(A)>;
-            key-positions = <11 12>;
+            timeout-ms = <100>;
         };
     };
 
@@ -223,19 +199,19 @@
             //                                     ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛   ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛
 
             bindings = <
-        &sys_reset   &trans  &trans  &trans  &trans    &kp C_POWER  &tog 0             &tog 1                &tog 2            &tog 3
-        &bootloader  &trans  &trans  &trans  &trans    &trans       &kp C_VOLUME_UP    &kp C_BRIGHTNESS_INC  &kp C_SLEEP_MODE  &trans
-&trans  &trans       &trans  &trans  &trans  &trans    &trans       &kp C_VOLUME_DOWN  &kp C_BRIGHTNESS_DEC  &trans            &trans  &trans
-                             &trans  &trans  &trans    &trans       &trans             &trans
+        &trans  &trans  &trans  &trans  &trans    &kp C_POWER  &tog 0             &tog 1                &tog 2            &tog 3
+        &trans  &trans  &trans  &trans  &trans    &trans       &kp C_VOLUME_UP    &kp C_BRIGHTNESS_INC  &kp C_SLEEP_MODE  &trans
+&trans  &trans  &trans  &trans  &trans  &trans    &trans       &kp C_VOLUME_DOWN  &kp C_BRIGHTNESS_DEC  &trans            &trans  &trans
+                        &trans  &trans  &trans    &trans       &trans             &trans
             >;
         };
 
         Bluetooth {
             bindings = <
-        &trans  &trans  &trans  &trans  &trans    &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4
-        &trans  &trans  &trans  &trans  &trans    &trans        &trans        &trans        &trans        &trans
-&trans  &trans  &trans  &trans  &trans  &trans    &trans        &trans        &trans        &trans        &trans        &trans
-                        &trans  &trans  &trans    &trans        &trans        &trans
+        &trans  &trans  &trans  &trans  &trans    &bt BT_SEL 0   &bt BT_SEL 1   &bt BT_SEL 2   &bt BT_SEL 3   &bt BT_SEL 4
+        &trans  &trans  &trans  &trans  &trans    &trans         &trans         &trans         &trans         &trans
+&trans  &trans  &trans  &trans  &trans  &trans    &bt BT_DISC 0  &bt BT_DISC 1  &bt BT_DISC 2  &bt BT_DISC 3  &bt BT_DISC 4  &trans
+                        &trans  &trans  &trans    &trans         &trans         &trans
             >;
         };
     };
