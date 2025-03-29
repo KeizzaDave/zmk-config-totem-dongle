@@ -32,6 +32,11 @@
     tapping-term-ms = <170>;
 };
 
+&sk { quick-release; };
+
+&sl {
+};
+
 / {
     combos {
         compatible = "zmk,combos";
