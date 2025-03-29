@@ -45,7 +45,7 @@
 
         esc {
             timeout-ms = <30>;
-            key-positions = <2 3>;
+            key-positions = <2 1>;
             bindings = <&kp ESC>;
         };
 
