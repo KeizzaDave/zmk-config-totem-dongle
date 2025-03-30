@@ -4,7 +4,7 @@ Please see [here](https://github.com/GEIGEIGEIST/zmk-config-totem/tree/master) f
 
 - Changed the default keymap to One Product
 
-     P   L   D   W   G         J   X   O   Y   Q
-CTRL N   R   S   T   M         U   A   E   I   H BSPC
-     Z   C   F   V   B         ,   .   ;   '   K
-            GUI  5  SHFT      SPC  6  ALT
+           P   L   D   W   G         J   X   O   Y   Q
+      CTRL N   R   S   T   M         U   A   E   I   H BSPC
+           Z   C   F   V   B         ,   .   ;   '   K
+                  GUI  5  SHFT      SPC  6  ALT
