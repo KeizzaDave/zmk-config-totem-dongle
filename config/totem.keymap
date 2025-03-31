@@ -25,6 +25,10 @@
 #define SYM  2
 #define ADJ  3
 
+&soft_off {
+    hold-time-ms = <2000>; // Only turn off it the key is held for 2 seconds or longer.
+};
+
 &mt {
     quick-tap-ms = <100>;
     global-quick-tap;
