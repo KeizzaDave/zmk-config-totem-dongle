@@ -25,10 +25,6 @@
 #define SYM  2
 #define ADJ  3
 
-&soft_off {
-    hold-time-ms = <2000>; // Only turn off it the key is held for 2 seconds or longer.
-};
-
 &mt {
     quick-tap-ms = <100>;
     global-quick-tap;
@@ -40,6 +36,11 @@
     quick-release;
     release-after-ms = <1>;
 };
+
+&soft_off {
+    hold-time-ms = <2000>; // Only turn off it the key is held for 3 seconds or longer.
+};
+
 
 &sl { release-after-ms = <1>; };
 
@@ -84,6 +85,12 @@
         };
     };
 
+      soft_off_on {
+            bindings = <&soft_off>;
+            key-positions = <0 1 2 3 6 7 8 9 >;
+            timeout-ms = <30>;
+        };
+
     behaviors {
         CTRL_CAPS: CTRL_CAPS {
             compatible = "zmk,behavior-tap-dance";
@@ -92,6 +99,7 @@
             bindings = <&sk LEFT_CONTROL>, <&kp CAPSLOCK>;
         };
     };
+
 
     keymap {
         compatible = "zmk,keymap";
