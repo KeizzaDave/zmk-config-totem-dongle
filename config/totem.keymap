@@ -83,13 +83,15 @@
             key-positions = <29 28 30>;
             timeout-ms = <100>;
         };
-    };
 
-      soft_off_on {
+        soft_off_on {
             bindings = <&soft_off>;
             key-positions = <0 1 2 3 6 7 8 9 >;
             timeout-ms = <30>;
         };
+
+    };
+
 
     behaviors {
         CTRL_CAPS: CTRL_CAPS {
