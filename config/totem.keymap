@@ -44,6 +44,11 @@
 &sl { release-after-ms = <1>; };
 
 / {
+    kscan: kscan {
+        compatible = "zmk,kscan-gpio-matrix";
+        diode-direction = "col2row";
+        wakeup-source;
+    };
     combos {
         compatible = "zmk,combos";
 
@@ -141,12 +146,7 @@
             split-peripheral-off-on-press;
             hold-time-ms = <2000>;
         };
-     kscan0:kscan_0 {
-        compatible = "zmk,kscan-gpio-matrix";
-        LABEL= "KSCAN";
-        diode-direction = "col2row";
-        wakeup-source;
-    };
+
     };
 
     keymap {
