@@ -58,7 +58,7 @@
             bindings = <&kp ENTER>;
             key-positions = <16 17 18>;
             timeout-ms = <30>;
-            layers = <0 1 2 3 4>;
+            layers = <0 1 2 3 4 6>;
         };
 
         tab {
@@ -286,10 +286,10 @@
             //                                     ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛   ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛
 
             bindings = <
-        &tog 10  &trans    &out OUT_TOG  &trans           &trans    &tog 0          &tog 1             &tog 2                &tog 3       &tog 4
-        &trans   &kp HOME  &kp INS       &kp PRINTSCREEN  &trans    &kp C_PREVIOUS  &kp C_VOLUME_UP    &kp C_BRIGHTNESS_INC  &kp C_PAUSE  &kp C_NEXT
-&trans  &trans   &trans    &trans        &trans           &trans    &kp C_MUTE      &kp C_VOLUME_DOWN  &kp C_BRIGHTNESS_DEC  &trans       &trans      &Softoff
-                           &trans        &trans           &trans    &trans          &trans             &trans
+        &tog 10  &trans  &out OUT_TOG  &trans  &Softoff    &tog 0          &tog 1             &tog 2                &tog 3       &tog 4
+        &trans   &trans  &trans        &trans  &trans      &kp C_PREVIOUS  &kp C_VOLUME_UP    &kp C_BRIGHTNESS_INC  &kp C_PAUSE  &kp C_NEXT
+&trans  &trans   &trans  &trans        &trans  &trans      &kp C_MUTE      &kp C_VOLUME_DOWN  &kp C_BRIGHTNESS_DEC  &trans       &trans      &trans
+                         &trans        &trans  &trans      &trans          &trans             &trans
             >;
         };
 
