@@ -229,9 +229,9 @@
             //                                     ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛   ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛
 
             bindings = <
-        &kp GRAVE      &kp LS(NUMBER_2)   &kp LS(NUMBER_3)       &kp LS(NUMBER_1)  &kp LS(NON_US_BACKSLASH)    &none          &kp LS(FSLH)    &kp LS(NUMBER_6)   &kp LS(NON_US_BACKSLASH)  &kp LS(N7)
-        &kp LS(N5)     &kp LEFT_BRACKET   &kp LS(LEFT_BRACKET)   &kp LS(N9)        &kp LS(MINUS)               &kp EQUAL      &kp LS(N8)      &kp SLASH          &kp LS(EQUAL)             &kp MINUS
-&trans  &kp LS(GRAVE)  &kp RIGHT_BRACKET  &kp LS(RIGHT_BRACKET)  &kp LS(N0)        &kp LS(NUMBER_4)            &kp LS(COMMA)  &kp LS(PERIOD)  &kp LS(SEMICOLON)  &kp LS(SQT)               &none       &trans
+        &kp GRAVE      &kp LS(NUMBER_2)   &kp LS(NUMBER_3)       &kp LS(NUMBER_1)  &kp LS(NON_US_BACKSLASH)    &none          &kp LS(FSLH)    &kp LS(NUMBER_6)   &kp LS(NUMBER_4)  &kp LS(N7)
+        &kp LS(N5)     &kp LEFT_BRACKET   &kp LS(LEFT_BRACKET)   &kp LS(N9)        &kp LS(MINUS)               &kp EQUAL      &kp LS(N8)      &kp SLASH          &kp LS(EQUAL)     &kp MINUS
+&trans  &kp LS(GRAVE)  &kp RIGHT_BRACKET  &kp LS(RIGHT_BRACKET)  &kp LS(N0)        &none                       &kp LS(COMMA)  &kp LS(PERIOD)  &kp LS(SEMICOLON)  &kp LS(SQT)       &none       &trans
                                           &trans                 &trans            &trans                      &trans         &trans          &trans
             >;
         };
