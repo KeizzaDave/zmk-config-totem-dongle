@@ -175,40 +175,40 @@
         DVORAK {
             label = "Dvorak Layer";
             bindings = <
-            &kp SEMI  &kp COMMA  &kp DOT       &kp P  &kp Y             &kp F      &kp G  &kp C          &kp R  &kp L
-            &kp A     &kp O      &kp E         &kp U  &kp I             &kp D      &kp H  &kp T          &kp N  &kp S
-&CTRL_CAPS  &kp APOS  &kp Q      &kp J         &kp K  &kp X             &kp B      &kp M  &kp W          &kp V  &kp Z  &kp BACKSPACE
-                                 &kp LEFT_GUI  &sl 5  &sk LEFT_SHIFT    &kp SPACE  &mo 7  &kp RIGHT_ALT
+            &kp SEMI  &kp COMMA  &kp DOT  &kp P  &kp Y             &kp F      &kp G  &kp C          &kp R  &kp L
+            &kp A     &kp O      &kp E    &kp U  &kp I             &kp D      &kp H  &kp T          &kp N  &kp S
+&CTRL_CAPS  &kp APOS  &kp Q      &kp J    &kp K  &kp X             &kp B      &kp M  &kp W          &kp V  &kp Z  &kp BACKSPACE
+                                 &mo 7    &sl 5  &sk LEFT_SHIFT    &kp SPACE  &mo 7  &kp RIGHT_ALT
             >;
         };
 
         Colemak_DH-m {
             label = "Colemak DH-m Layer";
             bindings = <
-            &kp Q  &kp W  &kp F         &kp P  &kp B             &kp J      &kp L  &kp U          &kp Y    &kp SEMI
-            &kp A  &kp R  &kp S         &kp T  &kp G             &kp M      &kp N  &kp E          &kp I    &kp O
-&CTRL_CAPS  &kp Z  &kp X  &kp C         &kp D  &kp V             &kp K      &kp H  &kp COMMA      &kp DOT  &kp APOS  &kp BACKSPACE
-                          &kp LEFT_GUI  &sl 5  &sk LEFT_SHIFT    &kp SPACE  &mo 7  &kp RIGHT_ALT
+            &kp Q  &kp W  &kp F  &kp P  &kp B             &kp J      &kp L  &kp U          &kp Y    &kp SEMI
+            &kp A  &kp R  &kp S  &kp T  &kp G             &kp M      &kp N  &kp E          &kp I    &kp O
+&CTRL_CAPS  &kp Z  &kp X  &kp C  &kp D  &kp V             &kp K      &kp H  &kp COMMA      &kp DOT  &kp APOS  &kp BACKSPACE
+                          &mo 7  &sl 5  &sk LEFT_SHIFT    &kp SPACE  &mo 7  &kp RIGHT_ALT
             >;
         };
 
         QWERTY {
             label = "QWERTY Layer";
             bindings = <
-            &kp Q  &kp W  &kp E         &kp R  &kp T             &kp Y      &kp U  &kp I          &kp O    &kp P
-            &kp A  &kp S  &kp D         &kp F  &kp G             &kp H      &kp J  &kp K          &kp L    &kp SEMI
-&CTRL_CAPS  &kp Z  &kp X  &kp C         &kp V  &kp B             &kp N      &kp M  &kp COMMA      &kp DOT  &kp FSLH  &kp BACKSPACE
-                          &kp LEFT_GUI  &sl 5  &sk LEFT_SHIFT    &kp SPACE  &mo 7  &kp RIGHT_ALT
+            &kp Q  &kp W  &kp E  &kp R  &kp T             &kp Y      &kp U  &kp I          &kp O    &kp P
+            &kp A  &kp S  &kp D  &kp F  &kp G             &kp H      &kp J  &kp K          &kp L    &kp SEMI
+&CTRL_CAPS  &kp Z  &kp X  &kp C  &kp V  &kp B             &kp N      &kp M  &kp COMMA      &kp DOT  &kp FSLH  &kp BACKSPACE
+                          &mo 7  &sl 5  &sk LEFT_SHIFT    &kp SPACE  &mo 7  &kp RIGHT_ALT
             >;
         };
 
         Gaming {
             label = "Gaming Layer";
             bindings = <
-                  &kp P  &kp L  &kp D         &kp W  &kp G             &kp J      &kp X    &kp O          &kp Y    &kp Q
-                  &kp N  &kp R  &kp S         &kp T  &kp M             &kp U      &kp A    &kp E          &kp I    &kp H
-&kp LEFT_CONTROL  &kp Z  &kp C  &kp F         &kp V  &kp B             &kp COMMA  &kp DOT  &kp SEMI       &kp SQT  &kp K  &kp BACKSPACE
-                                &kp LEFT_GUI  &mo 7  &kp LEFT_SHIFT    &kp SPACE  &mo 7    &kp RIGHT_ALT
+                  &kp P  &kp L  &kp D      &kp W         &kp G             &kp J      &kp X    &kp O          &kp Y    &kp Q
+                  &kp N  &kp R  &kp S      &kp T         &kp M             &kp U      &kp A    &kp E          &kp I    &kp H
+&kp LEFT_CONTROL  &kp Z  &kp C  &kp F      &kp V         &kp B             &kp COMMA  &kp DOT  &kp SEMI       &kp SQT  &kp K  &kp BACKSPACE
+                                &kp SPACE  &kp LEFT_ALT  &kp LEFT_SHIFT    &kp SPACE  &mo 7    &kp RIGHT_ALT
             >;
         };
 
@@ -286,10 +286,10 @@
             //                                     ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛   ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛
 
             bindings = <
-        &tog 10  &trans  &out OUT_TOG  &trans  &Softoff    &tog 0          &tog 1             &tog 2                &tog 3       &tog 4
-        &trans   &trans  &trans        &trans  &trans      &kp C_PREVIOUS  &kp C_VOLUME_UP    &kp C_BRIGHTNESS_INC  &kp C_PAUSE  &kp C_NEXT
-&trans  &trans   &trans  &trans        &trans  &trans      &kp C_MUTE      &kp C_VOLUME_DOWN  &kp C_BRIGHTNESS_DEC  &trans       &trans      &trans
-                         &trans        &trans  &trans      &trans          &trans             &trans
+        &tog 10  &trans  &out OUT_BLE  &out OUT_USB  &Softoff    &tog 0          &tog 1             &tog 2                &tog 3       &tog 4
+        &trans   &trans  &trans        &trans        &trans      &kp C_PREVIOUS  &kp C_VOLUME_UP    &kp C_BRIGHTNESS_INC  &kp C_PAUSE  &kp C_NEXT
+&trans  &trans   &trans  &trans        &trans        &trans      &kp C_MUTE      &kp C_VOLUME_DOWN  &kp C_BRIGHTNESS_DEC  &trans       &trans      &trans
+                         &trans        &trans        &trans      &trans          &trans             &trans
             >;
         };
 
