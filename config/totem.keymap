@@ -97,10 +97,10 @@
         };
 
         Reset_Button {
-            bindings = <&sys_reset>;
+            bindings = <&kp LC(RA(K))>;
             key-positions = <20 31 35 34>;
             timeout-ms = <30>;
-            layers = <0 1 2 3 4>;
+            layers = <0 1 2 3>;
         };
     };
 
@@ -157,10 +157,10 @@
             //                                     ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛   ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛
 
             bindings = <
-            &kp P  &kp L  &kp D  &kp W  &kp G             &kp J      &kp X       &kp O     &kp Y    &kp Q
-            &kp N  &kp R  &kp S  &kp T  &kp M             &kp U      &kp A       &kp E     &kp I    &kp H
-&CTRL_CAPS  &kp Z  &kp C  &kp F  &kp V  &kp B             &kp COMMA  &kp DOT     &kp SEMI  &kp SQT  &kp K  &kp BACKSPACE
-                          &mo 7  &sl 5  &kp LEFT_SHIFT    &kp SPACE  &arrowkeys  &kp LGUI
+            &kp P  &kp L  &kp D   &kp W  &kp G             &kp J      &kp X       &kp O     &kp Y    &kp Q
+            &kp N  &kp R  &kp S   &kp T  &kp M             &kp U      &kp A       &kp E     &kp I    &kp H
+&CTRL_CAPS  &kp Z  &kp C  &kp F   &kp V  &kp B             &kp COMMA  &kp DOT     &kp SEMI  &kp SQT  &kp K  &kp BACKSPACE
+                          &tog 7  &sl 5  &kp LEFT_SHIFT    &kp SPACE  &arrowkeys  &kp LGUI
             >;
         };
 
@@ -170,27 +170,27 @@
             &kp SEMI  &kp COMMA  &kp DOT  &kp P  &kp Y             &kp F      &kp G       &kp C          &kp R  &kp L
             &kp A     &kp O      &kp E    &kp U  &kp I             &kp D      &kp H       &kp T          &kp N  &kp S
 &CTRL_CAPS  &kp APOS  &kp Q      &kp J    &kp K  &kp X             &kp B      &kp M       &kp W          &kp V  &kp Z  &kp BACKSPACE
-                                 &mo 7    &sl 5  &sk LEFT_SHIFT    &kp SPACE  &arrowkeys  &kp RIGHT_ALT
+                                 &tog 7   &sl 5  &sk LEFT_SHIFT    &kp SPACE  &arrowkeys  &kp RIGHT_ALT
             >;
         };
 
         Colemak_DH-m {
             label = "Colemak DH-m Layer";
             bindings = <
-            &kp Q  &kp W  &kp F  &kp P  &kp B             &kp J      &kp L       &kp U          &kp Y    &kp SEMI
-            &kp A  &kp R  &kp S  &kp T  &kp G             &kp M      &kp N       &kp E          &kp I    &kp O
-&CTRL_CAPS  &kp Z  &kp X  &kp C  &kp D  &kp V             &kp K      &kp H       &kp COMMA      &kp DOT  &kp APOS  &kp BACKSPACE
-                          &mo 7  &sl 5  &sk LEFT_SHIFT    &kp SPACE  &arrowkeys  &kp RIGHT_ALT
+            &kp Q  &kp W  &kp F   &kp P  &kp B             &kp J      &kp L       &kp U          &kp Y    &kp SEMI
+            &kp A  &kp R  &kp S   &kp T  &kp G             &kp M      &kp N       &kp E          &kp I    &kp O
+&CTRL_CAPS  &kp Z  &kp X  &kp C   &kp D  &kp V             &kp K      &kp H       &kp COMMA      &kp DOT  &kp APOS  &kp BACKSPACE
+                          &tog 7  &sl 5  &sk LEFT_SHIFT    &kp SPACE  &arrowkeys  &kp RIGHT_ALT
             >;
         };
 
         Ipan {
             label = "Ipan Layer";
             bindings = <
-            &kp Q  &kp W  &kp E  &kp R  &kp T             &kp Y      &kp U       &kp I          &kp O    &kp P
-            &kp A  &kp S  &kp D  &kp F  &kp G             &kp H      &kp J       &kp K          &kp L    &kp SEMI
-&CTRL_CAPS  &kp Z  &kp X  &kp C  &kp V  &kp B             &kp N      &kp M       &kp COMMA      &kp DOT  &kp FSLH  &kp BACKSPACE
-                          &mo 7  &sl 5  &sk LEFT_SHIFT    &kp SPACE  &arrowkeys  &kp RIGHT_ALT
+            &kp Q  &kp W  &kp E   &kp R  &kp T             &kp Y      &kp U       &kp I          &kp O    &kp P
+            &kp A  &kp S  &kp D   &kp F  &kp G             &kp H      &kp J       &kp K          &kp L    &kp SEMI
+&CTRL_CAPS  &kp Z  &kp X  &kp C   &kp V  &kp B             &kp N      &kp M       &kp COMMA      &kp DOT  &kp FSLH  &kp BACKSPACE
+                          &tog 7  &sl 5  &sk LEFT_SHIFT    &kp SPACE  &arrowkeys  &kp RIGHT_ALT
             >;
         };
 
