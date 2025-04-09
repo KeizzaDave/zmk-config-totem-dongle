@@ -318,5 +318,14 @@
                      &Pressy_Layer  &none  &none    &none  &none  &none
             >;
         };
+
+        Num_Progam {
+            bindings = <
+        &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans
+        &kp N7  &kp N5  &kp N3  &kp N1  &kp N9    &kp N0  &kp N2  &kp N4  &kp N6  &kp N8
+&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
+                        &trans  &trans  &trans    &trans  &trans  &trans
+            >;
+        };
     };
 };
