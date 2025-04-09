@@ -51,56 +51,56 @@
             timeout-ms = <30>;
             key-positions = <2 1>;
             bindings = <&kp ESC>;
-            layers = <0 1 2 3 4 5 7>;
+            layers = <0 1 2 4 3 5 7>;
         };
 
         enter {
             bindings = <&kp ENTER>;
             key-positions = <16 17 18>;
             timeout-ms = <30>;
-            layers = <0 1 2 3 4 6 7 5>;
+            layers = <0 1 2 4 3 6 7 5>;
         };
 
         tab {
             bindings = <&kp TAB>;
             key-positions = <13 12>;
             timeout-ms = <30>;
-            layers = <0 1 2 3 4 5 6 7>;
+            layers = <0 1 2 4 3 5 6 7>;
         };
 
         option {
             bindings = <&mo 8>;
             key-positions = <22 23 21>;
             timeout-ms = <30>;
-            layers = <0 1 2 3 4>;
+            layers = <0 1 2 4 3>;
         };
 
         Bluetooth {
             bindings = <&mo 9>;
             key-positions = <0 1 2 3>;
             timeout-ms = <100>;
-            layers = <0 1 2 3 4>;
+            layers = <0 1 2 4 3>;
         };
 
         Option_2 {
             bindings = <&mo 8>;
             key-positions = <29 28 30>;
             timeout-ms = <30>;
-            layers = <0 1 2 3 4>;
+            layers = <0 1 2 4 3>;
         };
 
         Numeric {
             bindings = <&mo 6>;
             key-positions = <2 3>;
             timeout-ms = <30>;
-            layers = <0 2 4 1 3 5 7>;
+            layers = <0 2 3 1 4 5 7>;
         };
 
         Reset_Button {
             bindings = <&kp LC(RA(K))>;
             key-positions = <20 31 35 34>;
             timeout-ms = <50>;
-            layers = <0 1 2 3>;
+            layers = <0 1 2 4>;
         };
     };
 
@@ -138,7 +138,6 @@
             compatible = "zmk,behavior-tap-dance";
             label = "SYM_MOV";
             #binding-cells = <0>;
-            tapping-term-ms = <100>;
             bindings = <&sl 5>, <&tog 7>;
         };
     };
@@ -168,37 +167,27 @@
             &kp P  &kp L  &kp D   &kp W     &kp G             &kp J      &kp X          &kp O     &kp Y    &kp Q
             &kp N  &kp R  &kp S   &kp T     &kp M             &kp U      &kp A          &kp E     &kp I    &kp H
 &CTRL_CAPS  &kp Z  &kp C  &kp F   &kp V     &kp B             &kp COMMA  &kp DOT        &kp SEMI  &kp SQT  &kp K  &kp BACKSPACE
-                          &tog 7  &SYM_MOV  &kp LEFT_SHIFT    &kp SPACE  &kp RIGHT_ALT  &kp LGUI
+                          &sl 12  &SYM_MOV  &kp LEFT_SHIFT    &kp SPACE  &kp RIGHT_ALT  &kp LGUI
             >;
         };
 
         DVORAK {
             label = "Dvorak Layer";
             bindings = <
-            &kp SEMI  &kp COMMA  &kp DOT  &kp P     &kp Y             &kp F      &kp G     &kp C     &kp R  &kp L
-            &kp A     &kp O      &kp E    &kp U     &kp I             &kp D      &kp H     &kp T     &kp N  &kp S
-&CTRL_CAPS  &kp APOS  &kp Q      &kp J    &kp K     &kp X             &kp B      &kp M     &kp W     &kp V  &kp Z  &kp BACKSPACE
-                                 &tog 7   &SYM_MOV  &sk LEFT_SHIFT    &kp SPACE  &kp RALT  &kp RGUI
+        &kp SEMI  &kp COMMA  &kp DOT  &kp P   &kp Y     &kp F   &kp G   &kp C   &kp R  &kp L
+        &kp A     &kp O      &kp E    &kp U   &kp I     &kp D   &kp H   &kp T   &kp N  &kp S
+&trans  &kp APOS  &kp Q      &kp J    &kp K   &kp X     &kp B   &kp M   &kp W   &kp V  &kp Z  &trans
+                             &trans   &trans  &trans    &trans  &trans  &trans
             >;
         };
 
         Colemak_DH-m {
             label = "Colemak DH-m Layer";
             bindings = <
-            &kp Q  &kp W  &kp F   &kp P     &kp B             &kp J      &kp L       &kp U          &kp Y    &kp SEMI
-            &kp A  &kp R  &kp S   &kp T     &kp G             &kp M      &kp N       &kp E          &kp I    &kp O
-&CTRL_CAPS  &kp Z  &kp X  &kp C   &kp D     &kp V             &kp K      &kp H       &kp COMMA      &kp DOT  &kp APOS  &kp BACKSPACE
-                          &tog 7  &SYM_MOV  &sk LEFT_SHIFT    &kp SPACE  &arrowkeys  &kp RIGHT_WIN
-            >;
-        };
-
-        Ipan {
-            label = "Ipan Layer";
-            bindings = <
-            &kp Q  &kp W  &kp E   &kp R     &kp T             &kp Y      &kp U       &kp I          &kp O    &kp P
-            &kp A  &kp S  &kp D   &kp F     &kp G             &kp H      &kp J       &kp K          &kp L    &kp SEMI
-&CTRL_CAPS  &kp Z  &kp X  &kp C   &kp V     &kp B             &kp N      &kp M       &kp COMMA      &kp DOT  &kp FSLH  &kp BACKSPACE
-                          &tog 7  &SYM_MOV  &sk LEFT_SHIFT    &kp SPACE  &arrowkeys  &kp RIGHT_WIN
+        &kp Q  &kp W  &kp F   &kp P   &kp B     &kp J   &kp L   &kp U      &kp Y    &kp SEMI
+        &kp A  &kp R  &kp S   &kp T   &kp G     &kp M   &kp N   &kp E      &kp I    &kp O
+&trans  &kp Z  &kp X  &kp C   &kp D   &kp V     &kp K   &kp H   &kp COMMA  &kp DOT  &kp APOS  &trans
+                      &trans  &trans  &trans    &trans  &trans  &trans
             >;
         };
 
@@ -209,6 +198,16 @@
                   &kp N  &kp R  &kp S   &kp T         &kp M             &kp U      &kp A     &kp E          &kp I    &kp H
 &kp LEFT_CONTROL  &kp Z  &kp C  &kp F   &kp V         &kp B             &kp COMMA  &kp DOT   &kp SEMI       &kp SQT  &kp K  &kp BACKSPACE
                                 &mo 10  &kp LEFT_ALT  &kp LEFT_SHIFT    &kp SPACE  &SYM_MOV  &kp RIGHT_WIN
+            >;
+        };
+
+        Ipan {
+            label = "Ipan Layer";
+            bindings = <
+        &kp Q  &kp W  &kp E   &kp R   &kp T     &kp Y   &kp U   &kp I      &kp O    &kp P
+        &kp A  &kp S  &kp D   &kp F   &kp G     &kp H   &kp J   &kp K      &kp L    &kp SEMI
+&trans  &kp Z  &kp X  &kp C   &kp V   &kp B     &kp N   &kp M   &kp COMMA  &kp DOT  &kp FSLH  &trans
+                      &trans  &trans  &trans    &trans  &trans  &trans
             >;
         };
 
@@ -262,7 +261,7 @@
             //                                     ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛   ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛
 
             bindings = <
-        &mkp RCLK       &kp PAGE_DOWN   &kp PAGE_UP   &kp SLCK         &mkp MB3     &kp PRINTSCREEN  &kp HOME        &kp DEL       &kp END   &kp INSERT
+        &mkp RCLK       &msc SCRL_DOWN  &msc SCRL_UP  &kp SLCK         &mkp MB3     &kp PRINTSCREEN  &kp HOME        &kp DEL       &kp END   &kp INSERT
         &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_UP  &mmv MOVE_RIGHT  &mkp LCLK    &kp F11          &kp LEFT_ARROW  &kp UP_ARROW  &kp DOWN  &kp RIGHT
 &trans  &kp F1          &kp F2          &kp F3        &kp F4           &kp F5       &kp F6           &kp F7          &kp F8        &kp F9    &kp F10     &trans
                                         &trans        &trans           &trans       &trans           &trans          &trans
@@ -304,8 +303,8 @@
 
         Num_Gaming {
             bindings = <
-        &kp N1  &kp N2  &kp N3  &kp N4  &kp N5    &none   &none   &none   &none  &none
         &kp N6  &kp N7  &kp N8  &kp N9  &kp N0    &none   &none   &none   &none  &none
+        &kp N1  &kp N2  &kp N3  &kp N4  &kp N5    &none   &none   &none   &none  &none
 &trans  &none   &none   &none   &none   &none     &none   &none   &none   &none  &none  &trans
                         &trans  &trans  &trans    &trans  &trans  &trans
             >;
@@ -317,6 +316,15 @@
        &none  &none  &none          &none  &none    &none  &none  &none  &none  &none
 &none  &none  &none  &none          &none  &none    &none  &none  &none  &none  &none  &none
                      &Pressy_Layer  &none  &none    &none  &none  &none
+            >;
+        };
+
+        Progamming_Num {
+            bindings = <
+        &none   &none   &none   &none   &none     &none   &none   &none   &none   &none
+        &kp N7  &kp N5  &kp N3  &kp N1  &kp N9    &kp N0  &kp N2  &kp N4  &kp N6  &kp N8
+&trans  &none   &none   &none   &none   &none     &none   &none   &none   &none   &none   &trans
+                        &trans  &trans  &trans    &trans  &trans  &trans
             >;
         };
     };
