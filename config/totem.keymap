@@ -51,21 +51,21 @@
             timeout-ms = <30>;
             key-positions = <2 1>;
             bindings = <&kp ESC>;
-            layers = <0 1 2 4 3 5 7>;
+            layers = <0 1 2 4 3 5 7 11>;
         };
 
         enter {
             bindings = <&kp ENTER>;
             key-positions = <16 17 18>;
             timeout-ms = <30>;
-            layers = <0 1 2 4 3 6 7 5>;
+            layers = <0 1 2 4 3 6 7 5 11>;
         };
 
         tab {
             bindings = <&kp TAB>;
             key-positions = <13 12>;
             timeout-ms = <30>;
-            layers = <0 1 2 4 3 5 6 7>;
+            layers = <0 1 2 4 3 5 6 7 11>;
         };
 
         option {
@@ -116,7 +116,7 @@
             compatible = "zmk,behavior-tap-dance";
             label = "PRESSY_LAYER";
             #binding-cells = <0>;
-            bindings = <&none>, <&none>, <&none>, <&none>, <&tog 11>;
+            bindings = <&none>, <&none>, <&none>, <&none>, <&tog 12>;
         };
 
         arrowkeys: arrowkeys {
@@ -167,7 +167,7 @@
             &kp P  &kp L  &kp D   &kp W     &kp G             &kp J      &kp X          &kp O     &kp Y    &kp Q
             &kp N  &kp R  &kp S   &kp T     &kp M             &kp U      &kp A          &kp E     &kp I    &kp H
 &CTRL_CAPS  &kp Z  &kp C  &kp F   &kp V     &kp B             &kp COMMA  &kp DOT        &kp SEMI  &kp SQT  &kp K  &kp BACKSPACE
-                          &sl 12  &SYM_MOV  &kp LEFT_SHIFT    &kp SPACE  &kp RIGHT_ALT  &kp LGUI
+                          &sl 11  &SYM_MOV  &kp LEFT_SHIFT    &kp SPACE  &kp RIGHT_ALT  &kp LGUI
             >;
         };
 
@@ -285,7 +285,7 @@
             //                                     ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛   ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛
 
             bindings = <
-        &tog 11  &trans  &out OUT_BLE  &out OUT_USB  &Softoff    &tog 0          &tog 1             &tog 2                &tog 3       &tog 4
+        &tog 12  &trans  &out OUT_BLE  &out OUT_USB  &Softoff    &tog 0          &tog 1             &tog 2                &tog 3       &tog 4
         &trans   &trans  &trans        &trans        &trans      &kp C_PREVIOUS  &kp C_VOLUME_UP    &kp C_BRIGHTNESS_INC  &kp C_PAUSE  &kp C_NEXT
 &trans  &trans   &trans  &trans        &trans        &trans      &kp C_MUTE      &kp C_VOLUME_DOWN  &kp C_BRIGHTNESS_DEC  &trans       &trans      &trans
                          &trans        &trans        &trans      &trans          &trans             &trans
@@ -310,21 +310,21 @@
             >;
         };
 
+        Num_Progam {
+            bindings = <
+        &none   &none   &none   &none   &none     &none   &none   &none   &none   &none
+        &kp N7  &kp N5  &kp N3  &kp N1  &kp N9    &kp N0  &kp N2  &kp N4  &kp N6  &kp N8
+&trans  &none   &none   &none   &none   &none     &none   &none   &none   &none   &none   &trans
+                        &trans  &trans  &trans    &trans  &trans  &trans
+            >;
+        };
+
         None_Layer {
             bindings = <
        &none  &none  &none          &none  &none    &none  &none  &none  &none  &none
        &none  &none  &none          &none  &none    &none  &none  &none  &none  &none
 &none  &none  &none  &none          &none  &none    &none  &none  &none  &none  &none  &none
                      &Pressy_Layer  &none  &none    &none  &none  &none
-            >;
-        };
-
-        Num_Progam {
-            bindings = <
-        &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans
-        &kp N7  &kp N5  &kp N3  &kp N1  &kp N9    &kp N0  &kp N2  &kp N4  &kp N6  &kp N8
-&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
-                        &trans  &trans  &trans    &trans  &trans  &trans
             >;
         };
     };
