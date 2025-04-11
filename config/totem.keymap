@@ -34,14 +34,14 @@
 
 &sk {
     quick-release;
-    release-after-ms = <1>;
+    release-after-ms = <500>;
 };
 
 &soft_off {
     hold-time-ms = <2000>; // Only turn off it the key is held for 3 seconds or longer.
 };
 
-&sl { release-after-ms = <1>; };
+&sl { release-after-ms = <500>; };
 
 / {
     combos {
@@ -126,19 +126,13 @@
             bindings = <&kp RIGHT_ALT>, <&tog 7>;
         };
 
-        Softoff: Softoff {
-            compatible = "zmk,behavior-soft-off";
-            label = "SOFTOFF";
-            #binding-cells = <0>;
-            split-peripheral-off-on-press;
-            hold-time-ms = <2000>;
-        };
-
         SYM_MOV: SYM_MOV {
             compatible = "zmk,behavior-tap-dance";
             label = "SYM_MOV";
             #binding-cells = <0>;
             bindings = <&sl 5>, <&tog 7>;
+
+            tapping-term-ms = <250>;
         };
     };
 
@@ -164,10 +158,10 @@
             //                                     ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛   ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛
 
             bindings = <
-            &kp P  &kp L  &kp D   &kp W     &kp G             &kp J      &kp X          &kp O     &kp Y    &kp Q
-            &kp N  &kp R  &kp S   &kp T     &kp M             &kp U      &kp A          &kp E     &kp I    &kp H
-&CTRL_CAPS  &kp Z  &kp C  &kp F   &kp V     &kp B             &kp COMMA  &kp DOT        &kp SEMI  &kp SQT  &kp K  &kp BACKSPACE
-                          &sl 11  &SYM_MOV  &kp LEFT_SHIFT    &kp SPACE  &kp RIGHT_ALT  &kp LGUI
+            &kp P  &kp L  &kp D         &kp W     &kp G             &kp J      &kp X    &kp O     &kp Y    &kp Q
+            &kp N  &kp R  &kp S         &kp T     &kp M             &kp U      &kp A    &kp E     &kp I    &kp H
+&CTRL_CAPS  &kp Z  &kp C  &kp F         &kp V     &kp B             &kp COMMA  &kp DOT  &kp SEMI  &kp SQT  &kp K  &kp BACKSPACE
+                          &kp LEFT_ALT  &SYM_MOV  &kp LEFT_SHIFT    &kp SPACE  &sl 11   &kp LGUI
             >;
         };
 
@@ -285,10 +279,10 @@
             //                                     ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛   ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛
 
             bindings = <
-        &tog 12  &trans  &out OUT_BLE  &out OUT_USB  &Softoff    &tog 0          &tog 1             &tog 2                &tog 3       &tog 4
-        &trans   &trans  &trans        &trans        &trans      &kp C_PREVIOUS  &kp C_VOLUME_UP    &kp C_BRIGHTNESS_INC  &kp C_PAUSE  &kp C_NEXT
-&trans  &trans   &trans  &trans        &trans        &trans      &kp C_MUTE      &kp C_VOLUME_DOWN  &kp C_BRIGHTNESS_DEC  &trans       &trans      &trans
-                         &trans        &trans        &trans      &trans          &trans             &trans
+        &tog 12  &trans  &out OUT_BLE  &out OUT_USB  &soft_off    &tog 0          &tog 1             &tog 2                &tog 3       &tog 4
+        &trans   &trans  &trans        &trans        &trans       &kp C_PREVIOUS  &kp C_VOLUME_UP    &kp C_BRIGHTNESS_INC  &kp C_PAUSE  &kp C_NEXT
+&trans  &trans   &trans  &trans        &trans        &trans       &kp C_MUTE      &kp C_VOLUME_DOWN  &kp C_BRIGHTNESS_DEC  &trans       &trans      &trans
+                         &trans        &trans        &trans       &trans          &trans             &trans
             >;
         };
 
