@@ -116,7 +116,9 @@
             compatible = "zmk,behavior-tap-dance";
             label = "PRESSY_LAYER";
             #binding-cells = <0>;
-            bindings = <&none>, <&none>, <&none>, <&none>, <&tog 12>;
+            bindings = <&none>, <&none>, <&tog 12>;
+
+            tapping-term-ms = <250>;
         };
 
         arrowkeys: arrowkeys {
@@ -126,11 +128,11 @@
             bindings = <&kp RIGHT_ALT>, <&tog 7>;
         };
 
-        SYM_MOV: SYM_MOV {
+        Num_Move: Num_Move {
             compatible = "zmk,behavior-tap-dance";
-            label = "SYM_MOV";
+            label = "NUM_MOVE";
             #binding-cells = <0>;
-            bindings = <&sl 5>, <&tog 7>;
+            bindings = <&sl 11>, <&tog 7>;
 
             tapping-term-ms = <250>;
         };
@@ -158,10 +160,10 @@
             //                                     ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛   ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛
 
             bindings = <
-            &kp P  &kp L  &kp D         &kp W     &kp G             &kp J      &kp X    &kp O     &kp Y    &kp Q
-            &kp N  &kp R  &kp S         &kp T     &kp M             &kp U      &kp A    &kp E     &kp I    &kp H
-&CTRL_CAPS  &kp Z  &kp C  &kp F         &kp V     &kp B             &kp COMMA  &kp DOT  &kp SEMI  &kp SQT  &kp K  &kp BACKSPACE
-                          &kp LEFT_ALT  &SYM_MOV  &kp LEFT_SHIFT    &kp SPACE  &sl 11   &kp LGUI
+            &kp P  &kp L  &kp D         &kp W  &kp G             &kp J      &kp X      &kp O     &kp Y    &kp Q
+            &kp N  &kp R  &kp S         &kp T  &kp M             &kp U      &kp A      &kp E     &kp I    &kp H
+&CTRL_CAPS  &kp Z  &kp C  &kp F         &kp V  &kp B             &kp COMMA  &kp DOT    &kp SEMI  &kp SQT  &kp K  &kp BACKSPACE
+                          &kp LEFT_ALT  &sl 5  &sk LEFT_SHIFT    &kp SPACE  &Num_Move  &kp LGUI
             >;
         };
 
@@ -188,10 +190,10 @@
         Gaming {
             label = "Gaming Layer";
             bindings = <
-                  &kp P  &kp L  &kp D   &kp W         &kp G             &kp J      &kp X     &kp O          &kp Y    &kp Q
-                  &kp N  &kp R  &kp S   &kp T         &kp M             &kp U      &kp A     &kp E          &kp I    &kp H
-&kp LEFT_CONTROL  &kp Z  &kp C  &kp F   &kp V         &kp B             &kp COMMA  &kp DOT   &kp SEMI       &kp SQT  &kp K  &kp BACKSPACE
-                                &mo 10  &kp LEFT_ALT  &kp LEFT_SHIFT    &kp SPACE  &SYM_MOV  &kp RIGHT_WIN
+                  &kp P  &kp L  &kp D   &kp W         &kp G             &kp J      &kp X      &kp O          &kp Y    &kp Q
+                  &kp N  &kp R  &kp S   &kp T         &kp M             &kp U      &kp A      &kp E          &kp I    &kp H
+&kp LEFT_CONTROL  &kp Z  &kp C  &kp F   &kp V         &kp B             &kp COMMA  &kp DOT    &kp SEMI       &kp SQT  &kp K  &kp BACKSPACE
+                                &mo 10  &kp LEFT_ALT  &kp LEFT_SHIFT    &kp SPACE  &Num_Move  &kp RIGHT_WIN
             >;
         };
 
