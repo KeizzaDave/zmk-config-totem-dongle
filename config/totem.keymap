@@ -41,9 +41,6 @@
     hold-time-ms = <2000>; // Only turn off it the key is held for 3 seconds or longer.
 };
 
-&sl {
-};
-
 };
 
 / {
@@ -140,6 +137,9 @@ behaviors {
 
         tapping-term-ms = <250>;
     };
+};
+
+behaviors {
 };
 
 behaviors {
