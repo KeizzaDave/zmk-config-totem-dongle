@@ -34,12 +34,14 @@
 
 &sk {
     quick-release;
-    release-after-ms = <500>;
+    release-after-ms = <350>;
 };
 
 &soft_off {
     hold-time-ms = <2000>; // Only turn off it the key is held for 3 seconds or longer.
 };
+
+&sl { release-after-ms = <350>; };
 
 / {
     combos {
