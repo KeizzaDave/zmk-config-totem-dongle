@@ -139,11 +139,13 @@
             tapping-term-ms = <250>;
         };
 
-        new_behavior: new_behavior {
+        MOV: MOV {
             compatible = "zmk,behavior-tap-dance";
-            label = "NEW_BEHAVIOR";
+            label = "MOV";
             #binding-cells = <0>;
             bindings = <&mo 7>, <&tog 7>;
+
+            tapping-term-ms = <250>;
         };
     };
 
@@ -178,7 +180,7 @@
             &kp P  &kp L  &kp D         &kp W     &kp G             &kp J      &kp X    &kp O     &kp Y    &kp Q
             &kp N  &kp R  &kp S         &kp T     &kp M             &kp U      &kp A    &kp E     &kp I    &kp H
 &CTRL_CAPS  &kp Z  &kp C  &kp F         &kp V     &kp B             &kp COMMA  &kp DOT  &kp SEMI  &kp SQT  &kp K  &kp BACKSPACE
-                          &kp LEFT_ALT  &SYM_NUM  &sk LEFT_SHIFT    &kp SPACE  &mo 7    &kp LGUI
+                          &kp LEFT_ALT  &SYM_NUM  &sk LEFT_SHIFT    &kp SPACE  &MOV     &kp LGUI
             >;
         };
 
