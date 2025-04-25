@@ -134,7 +134,7 @@
             compatible = "zmk,behavior-tap-dance";
             label = "SYM_NUM";
             #binding-cells = <0>;
-            bindings = <&sl 5>, <&sl 6>;
+            bindings = <&sl 5>, <&sl 11>;
 
             tapping-term-ms = <250>;
         };
@@ -207,10 +207,10 @@
         Gaming {
             label = "Gaming Layer";
             bindings = <
-                  &kp P  &kp L  &kp D   &kp W         &kp G             &kp J      &kp X     &kp O          &kp Y    &kp Q
-                  &kp N  &kp R  &kp S   &kp T         &kp M             &kp U      &kp A     &kp E          &kp I    &kp H
-&kp LEFT_CONTROL  &kp Z  &kp C  &kp F   &kp V         &kp B             &kp COMMA  &kp DOT   &kp SEMI       &kp SQT  &kp K  &kp BACKSPACE
-                                &mo 10  &kp LEFT_ALT  &kp LEFT_SHIFT    &kp SPACE  &SYM_NUM  &kp RIGHT_WIN
+                  &kp P  &kp L  &kp D   &kp W         &kp G             &kp J      &kp X    &kp O          &kp Y    &kp Q
+                  &kp N  &kp R  &kp S   &kp T         &kp M             &kp U      &kp A    &kp E          &kp I    &kp H
+&kp LEFT_CONTROL  &kp Z  &kp C  &kp F   &kp V         &kp B             &kp COMMA  &kp DOT  &kp SEMI       &kp SQT  &kp K  &kp BACKSPACE
+                                &mo 10  &kp LEFT_ALT  &kp LEFT_SHIFT    &kp SPACE  &MOV     &kp RIGHT_WIN
             >;
         };
 
