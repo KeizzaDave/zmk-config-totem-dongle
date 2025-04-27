@@ -155,6 +155,22 @@
     behaviors {
     };
 
+    macros {
+        Sym: Sym {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&sl 5>;
+            label = "SYM";
+        };
+
+        Num: Num {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&sl 11>;
+            label = "NUM";
+        };
+    };
+
     keymap {
         compatible = "zmk,keymap";
 
@@ -177,10 +193,10 @@
             //                                     ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛   ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛
 
             bindings = <
-            &kp P  &kp L  &kp D         &kp W     &kp G             &kp J      &kp X    &kp O     &kp Y    &kp Q
-            &kp N  &kp R  &kp S         &kp T     &kp M             &kp U      &kp A    &kp E     &kp I    &kp H
-&CTRL_CAPS  &kp Z  &kp C  &kp F         &kp V     &kp B             &kp COMMA  &kp DOT  &kp SEMI  &kp SQT  &kp K  &kp BACKSPACE
-                          &kp LEFT_ALT  &SYM_NUM  &sk LEFT_SHIFT    &kp SPACE  &MOV     &kp LGUI
+            &kp P  &kp L  &kp D         &kp W  &kp G             &kp J      &kp X    &kp O     &kp Y    &kp Q
+            &kp N  &kp R  &kp S         &kp T  &kp M             &kp U      &kp A    &kp E     &kp I    &kp H
+&CTRL_CAPS  &kp Z  &kp C  &kp F         &kp V  &kp B             &kp COMMA  &kp DOT  &kp SEMI  &kp SQT  &kp K  &kp BACKSPACE
+                          &kp LEFT_ALT  &Sym   &sk LEFT_SHIFT    &kp SPACE  &MOV     &kp LGUI
             >;
         };
 
@@ -244,7 +260,7 @@
         &kp GRAVE      &kp LS(NUMBER_2)   &kp LS(NUMBER_3)       &kp LS(NUMBER_1)  &kp LS(NON_US_BACKSLASH)    &kp LS(NUMBER_4)  &kp LS(FSLH)    &kp NON_US_BACKSLASH  &kp LS(NUMBER_6)  &kp LS(N7)
         &kp LS(N5)     &kp LEFT_BRACKET   &kp LS(LEFT_BRACKET)   &kp LS(N9)        &kp LS(MINUS)               &kp EQUAL         &kp LS(N8)      &kp SLASH             &kp LS(EQUAL)     &kp MINUS
 &trans  &kp LS(GRAVE)  &kp RIGHT_BRACKET  &kp LS(RIGHT_BRACKET)  &kp LS(N0)        &none                       &kp LS(COMMA)     &kp LS(PERIOD)  &kp LS(SEMICOLON)     &kp LS(SQT)       &none       &trans
-                                          &trans                 &trans            &trans                      &trans            &trans          &trans
+                                          &trans                 &Num              &trans                      &trans            &trans          &trans
             >;
         };
 
