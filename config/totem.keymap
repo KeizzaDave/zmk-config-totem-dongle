@@ -77,7 +77,7 @@
 
         Bluetooth {
             bindings = <&mo 9>;
-            key-positions = <0 1 2 3>;
+            key-positions = <2 3 1>;
             timeout-ms = <100>;
             layers = <0 1 2 4 3>;
         };
@@ -87,13 +87,6 @@
             key-positions = <29 28 30>;
             timeout-ms = <30>;
             layers = <0 1 2 4 3>;
-        };
-
-        Numeric {
-            bindings = <&mo 6>;
-            key-positions = <2 3>;
-            timeout-ms = <30>;
-            layers = <0 2 3 1 4 5 7>;
         };
 
         Reset_Button {
@@ -193,10 +186,10 @@
             //                                     ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛   ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛
 
             bindings = <
-            &kp P  &kp L  &kp D         &kp W     &kp G             &kp J      &kp X    &kp O     &kp Y    &kp Q
-            &kp N  &kp R  &kp S         &kp T     &kp M             &kp U      &kp A    &kp E     &kp I    &kp H
-&CTRL_CAPS  &kp Z  &kp C  &kp F         &kp V     &kp B             &kp COMMA  &kp DOT  &kp SEMI  &kp SQT  &kp K  &kp BACKSPACE
-                          &kp LEFT_ALT  &SYM_NUM  &sk LEFT_SHIFT    &kp SPACE  &MOV     &kp LGUI
+            &kp P  &kp L  &kp D         &kp W  &kp G             &kp J      &kp X    &kp O          &kp Y    &kp Q
+            &kp N  &kp R  &kp S         &kp T  &kp M             &kp U      &kp A    &kp E          &kp I    &kp H
+&CTRL_CAPS  &kp Z  &kp C  &kp F         &kp V  &kp B             &kp COMMA  &kp DOT  &kp SEMI       &kp SQT  &kp K  &kp BACKSPACE
+                          &kp LEFT_GUI  &sl 5  &sk LEFT_SHIFT    &kp SPACE  &MOV     &kp RIGHT_ALT
             >;
         };
 
@@ -260,7 +253,7 @@
         &kp GRAVE      &kp LS(NUMBER_2)   &kp LS(NUMBER_3)       &kp LS(NUMBER_1)  &kp LS(NON_US_BACKSLASH)    &kp LS(NUMBER_4)  &kp LS(FSLH)    &kp NON_US_BACKSLASH  &kp LS(NUMBER_6)  &kp LS(N7)
         &kp LS(N5)     &kp LEFT_BRACKET   &kp LS(LEFT_BRACKET)   &kp LS(N9)        &kp LS(MINUS)               &kp EQUAL         &kp LS(N8)      &kp SLASH             &kp LS(EQUAL)     &kp MINUS
 &trans  &kp LS(GRAVE)  &kp RIGHT_BRACKET  &kp LS(RIGHT_BRACKET)  &kp LS(N0)        &none                       &kp LS(COMMA)     &kp LS(PERIOD)  &kp LS(SEMICOLON)     &kp LS(SQT)       &none       &trans
-                                          &trans                 &Num              &trans                      &trans            &trans          &trans
+                                          &trans                 &trans            &sl 11                      &trans            &trans          &trans
             >;
         };
 
@@ -323,7 +316,7 @@
 
         Bluetooth {
             bindings = <
-        &trans  &trans  &trans  &trans  &trans    &sys_reset     &bt BT_PRV     &bt BT_CLR     &bt BT_CLR_ALL  &bt BT_NXT
+        &trans  &trans  &trans  &trans  &trans    &none          &bt BT_PRV     &bt BT_CLR     &bt BT_CLR_ALL  &bt BT_NXT
         &trans  &trans  &trans  &trans  &trans    &bt BT_SEL 0   &bt BT_SEL 1   &bt BT_SEL 2   &bt BT_SEL 3    &bt BT_SEL 4
 &trans  &trans  &trans  &trans  &trans  &trans    &bt BT_DISC 0  &bt BT_DISC 1  &bt BT_DISC 2  &bt BT_DISC 3   &bt BT_DISC 4  &trans
                         &trans  &trans  &trans    &trans         &trans         &trans
