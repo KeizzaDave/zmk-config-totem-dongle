@@ -51,56 +51,56 @@
             timeout-ms = <30>;
             key-positions = <2 1>;
             bindings = <&kp ESC>;
-            layers = <2 3 3 4 3 5 8 12>;
+            layers = <2 4 5 8 12>;
         };
 
         enter {
             bindings = <&kp ENTER>;
             key-positions = <16 17 18>;
             timeout-ms = <30>;
-            layers = <2 3 3 4 3 7 8 5 12>;
+            layers = <2 4 7 8 5 12>;
         };
 
         tab {
             bindings = <&kp TAB>;
             key-positions = <13 12>;
             timeout-ms = <30>;
-            layers = <2 3 3 4 3 5 7 8 12>;
+            layers = <2 4 5 7 8 12>;
         };
 
         option {
             bindings = <&mo 9>;
             key-positions = <22 23 21>;
             timeout-ms = <30>;
-            layers = <2 3 3 4 3>;
+            layers = <2 4>;
         };
 
         Bluetooth {
             bindings = <&mo 10>;
             key-positions = <2 3 1>;
             timeout-ms = <100>;
-            layers = <2 3 3 4 3>;
+            layers = <2 4>;
         };
 
         Option_2 {
             bindings = <&mo 9>;
             key-positions = <29 28 30>;
             timeout-ms = <30>;
-            layers = <2 3 3 4 3>;
+            layers = <2 4>;
         };
 
         Reset_Button {
             bindings = <&kp LC(RA(K))>;
             key-positions = <20 31 35 34>;
             timeout-ms = <50>;
-            layers = <2 3 3 4>;
+            layers = <2 4>;
         };
 
         Num {
             bindings = <&mo 7>;
             key-positions = <3 2>;
             timeout-ms = <30>;
-            layers = <2 3 3 4 5 8 12>;
+            layers = <2 4 5 8 12>;
         };
     };
 
@@ -221,12 +221,12 @@
         };
 
         Gaming {
-            label = "Gaming Layer";
+            label = "Gaming";
             bindings = <
-                  &kp P  &kp L  &kp D   &kp W         &kp G             &kp J      &kp X    &kp O          &kp Y    &kp Q
-                  &kp N  &kp R  &kp S   &kp T         &kp M             &kp U      &kp A    &kp E          &kp I    &kp H
-&kp LEFT_CONTROL  &kp Z  &kp C  &kp F   &kp V         &kp B             &kp COMMA  &kp DOT  &kp SEMI       &kp SQT  &kp K  &kp BACKSPACE
-                                &mo 11  &kp LEFT_ALT  &kp LEFT_SHIFT    &kp SPACE  &MOV     &kp RIGHT_WIN
+           &kp F  &kp D  &kp L  &kp G         &kp V             &kp Q      &kp R  &kp U         &kp O    &kp COMMA
+           &kp S  &kp T  &kp H  &kp C         &kp Y             &kp J      &kp N  &kp E         &kp A    &kp I
+&kp LCTRL  &kp Z  &kp K  &kp M  &kp P         &kp W             &kp X      &kp B  &kp SEMI      &kp SQT  &kp COMMA  &kp BACKSPACE
+                         &mo 6  &kp LEFT_ALT  &sk LEFT_SHIFT    &kp SPACE  &MOV   &kp LEFT_GUI
             >;
         };
 
