@@ -143,7 +143,7 @@
             compatible = "zmk,behavior-tap-dance";
             label = "MOV";
             #binding-cells = <0>;
-            bindings = <&mo 6>, <&tog 8>;
+            bindings = <&mo 12>, <&tog 8>;
 
             tapping-term-ms = <250>;
         };
