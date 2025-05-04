@@ -7,4 +7,4 @@ Please see [here](https://github.com/GEIGEIGEIST/zmk-config-totem/tree/master) f
            P   L   D   W   G         J   X   O   Y   Q
       CTRL N   R   S   T   M         U   A   E   I   H BSPC
            Z   C   F   V   B         ,   .   ;   '   K
-                   6   5  SHFT     SPC  ALT  GUI
+              GUI  SYM  SHFT       SPC  MOV  ALT  
