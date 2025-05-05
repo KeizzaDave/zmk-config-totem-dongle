@@ -151,7 +151,7 @@
             bindings = <
             &kp F           &kp D  &kp L         &kp G     &kp V             &kp Q      &kp R  &kp U         &kp O    &kp COMMA
             &kp S           &kp T  &kp H         &kp C     &kp Y             &kp J      &kp N  &kp E         &kp A    &kp I
-&CTRL_CAPS  &mt LEFT_ALT Z  &kp K  &kp M         &kp P     &kp W             &kp X      &kp B  &kp SEMI      &kp SQT  &kp COMMA  &kp BACKSPACE
+&CTRL_CAPS  &mt LEFT_ALT Z  &kp K  &kp M         &kp P     &kp W             &kp X      &kp B  &kp SEMI      &kp SQT  &kp PERIOD  &kp BACKSPACE
                                    &kp LEFT_GUI  &SYM_NUM  &sk LEFT_SHIFT    &kp SPACE  &MOV   &kp LEFT_ALT
             >;
         };
