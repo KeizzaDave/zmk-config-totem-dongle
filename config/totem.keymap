@@ -133,6 +133,15 @@
 
             tapping-term-ms = <250>;
         };
+
+        SYMG: SYMG {
+            compatible = "zmk,behavior-tap-dance";
+            label = "SYMG";
+            #binding-cells = <0>;
+            bindings = <&mo 5>, <&mo 7>;
+
+            tapping-term-ms = <250>;
+        };
     };
 
     behaviors {
@@ -196,7 +205,7 @@
            &kp F  &kp D  &kp L  &kp G         &kp V             &kp Q      &kp R  &kp U         &kp O    &kp COMMA
            &kp S  &kp T  &kp H  &kp C         &kp Y             &kp J      &kp N  &kp E         &kp A    &kp I
 &kp LCTRL  &kp Z  &kp K  &kp M  &kp P         &kp W             &kp X      &kp B  &kp SEMI      &kp SQT  &kp COMMA  &kp BACKSPACE
-                         &mo 6  &kp LEFT_ALT  &sk LEFT_SHIFT    &kp SPACE  &MOV   &kp LEFT_GUI
+                         &SYMG  &kp LEFT_ALT  &kp LEFT_SHIFT    &kp SPACE  &MOV   &kp LEFT_GUI
             >;
         };
 
