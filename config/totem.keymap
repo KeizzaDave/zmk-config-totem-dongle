@@ -116,20 +116,11 @@
             tapping-term-ms = <250>;
         };
 
-        arrowkeys: arrowkeys {
-            compatible = "zmk,behavior-tap-dance";
-            label = "ARROWKEYS";
-            #binding-cells = <0>;
-            bindings = <&sl 0>, <&tog 7>;
-
-            tapping-term-ms = <250>;
-        };
-
         SYM_NUM: SYM_NUM {
             compatible = "zmk,behavior-tap-dance";
             label = "SYM_NUM";
             #binding-cells = <0>;
-            bindings = <&sl 6>, <&sl 7>;
+            bindings = <&sl 5>, <&sl 7>;
 
             tapping-term-ms = <250>;
         };
@@ -182,10 +173,10 @@
             //                                     ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛   ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛
 
             bindings = <
-            &kp P           &kp L  &kp D         &kp W       &kp G             &kp J      &kp X    &kp O          &kp Y    &kp Q
-            &kp N           &kp R  &kp S         &kp T       &kp M             &kp U      &kp A    &kp E          &kp I    &kp H
-&CTRL_CAPS  &mt LEFT_ALT Z  &kp C  &kp F         &kp V       &kp B             &kp COMMA  &kp DOT  &kp SEMI       &kp SQT  &kp K  &kp BACKSPACE
-                                   &kp LEFT_GUI  &arrowkeys  &sk LEFT_SHIFT    &kp SPACE  &MOV     &kp RIGHT_ALT
+            &kp P           &kp L  &kp D         &kp W     &kp G             &kp J      &kp X    &kp O          &kp Y    &kp Q
+            &kp N           &kp R  &kp S         &kp T     &kp M             &kp U      &kp A    &kp E          &kp I    &kp H
+&CTRL_CAPS  &mt LEFT_ALT Z  &kp C  &kp F         &kp V     &kp B             &kp COMMA  &kp DOT  &kp SEMI       &kp SQT  &kp K  &kp BACKSPACE
+                                   &kp LEFT_GUI  &SYM_NUM  &sk LEFT_SHIFT    &kp SPACE  &MOV     &kp RIGHT_ALT
             >;
         };
 
