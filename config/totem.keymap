@@ -51,49 +51,49 @@
             timeout-ms = <30>;
             key-positions = <2 1>;
             bindings = <&kp ESC>;
-            layers = <2 4 6 7 3 0 6 13>;
+            layers = <2 4 6 7 3 0 6 13 1>;
         };
 
         enter {
             bindings = <&kp ENTER>;
             key-positions = <16 17 18>;
             timeout-ms = <30>;
-            layers = <2 4 13 6 7 0 3 6>;
+            layers = <2 4 13 6 7 0 3 6 1>;
         };
 
         tab {
             bindings = <&kp TAB>;
             key-positions = <13 12>;
             timeout-ms = <30>;
-            layers = <2 4 13 6 7 0 3 6>;
+            layers = <2 4 13 6 7 0 3 6 1>;
         };
 
         option {
             bindings = <&mo 10>;
             key-positions = <22 23 21>;
             timeout-ms = <30>;
-            layers = <2 4 0 3 6>;
+            layers = <2 4 0 3 6 1>;
         };
 
         Bluetooth {
             bindings = <&mo 10>;
             key-positions = <2 3 1>;
             timeout-ms = <100>;
-            layers = <2 4 0 3>;
+            layers = <2 4 0 3 1>;
         };
 
         Option_2 {
             bindings = <&mo 10>;
             key-positions = <29 28 30>;
             timeout-ms = <30>;
-            layers = <2 4 0 3>;
+            layers = <2 4 0 3 1>;
         };
 
         Reset_Button {
             bindings = <&kp LC(RA(K))>;
             key-positions = <20 31 35 34>;
             timeout-ms = <50>;
-            layers = <2 4 0 3>;
+            layers = <2 4 0 3 1>;
         };
     };
 
