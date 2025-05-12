@@ -202,10 +202,10 @@
         Gaming {
             label = "Gaming";
             bindings = <
-           &kp F  &kp D  &kp L  &kp G         &kp V             &kp Q      &kp R  &kp U         &kp O    &kp COMMA
-           &kp S  &kp T  &kp H  &kp C         &kp Y             &kp J      &kp N  &kp E         &kp A    &kp I
-&kp LCTRL  &kp Z  &kp K  &kp M  &kp P         &kp W             &kp X      &kp B  &kp SEMI      &kp SQT  &kp COMMA  &kp BACKSPACE
-                         &SYMG  &kp LEFT_ALT  &kp LEFT_SHIFT    &kp SPACE  &MOV   &kp LEFT_GUI
+                &kp F  &kp D  &kp L  &kp G         &kp V               &kp Q      &kp R  &kp U         &kp O    &kp COMMA
+                &kp S  &kp T  &kp H  &kp C         &kp Y               &kp J      &kp N  &kp E         &kp A    &kp I
+&kp LEFT_SHIFT  &kp Z  &kp K  &kp M  &kp P         &kp W               &kp X      &kp B  &kp SEMI      &kp SQT  &kp PERIOD  &kp BACKSPACE
+                              &SYMG  &kp LEFT_ALT  &kp LEFT_CONTROL    &kp SPACE  &MOV   &kp LEFT_GUI
             >;
         };
 
