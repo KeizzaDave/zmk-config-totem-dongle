@@ -142,6 +142,14 @@
 
             tapping-term-ms = <250>;
         };
+
+        Num_Program: Num_Program {
+            compatible = "zmk,behavior-tap-dance";
+            label = "NUM_PROGRAM";
+            #binding-cells = <0>;
+            tapping-term-ms = <250>;
+            bindings = <&none>, <&tog 7>;
+        };
     };
 
     behaviors {
