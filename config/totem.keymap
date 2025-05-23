@@ -263,9 +263,9 @@
 
         Num_Progam {
             bindings = <
-        &none   &none   &none   &none     &none     &none   &none   &none   &none   &none
+        &none   &none   &none   &none     &none     &none   &none   &none   &none   &kp COMMA
         &kp N7  &kp N5  &kp N3  &kp N1    &kp N9    &kp N0  &kp N2  &kp N4  &kp N6  &kp N8
-&trans  &none   &none   &none   &none     &none     &none   &none   &none   &none   &none   &trans
+&trans  &none   &none   &none   &none     &none     &none   &none   &none   &none   &kp PERIOD  &trans
                         &trans  &SYM_NUM  &trans    &trans  &MOV    &trans
             >;
         };
