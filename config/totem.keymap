@@ -186,10 +186,10 @@
         Gaming2 {
             label = "Gaming2";
             bindings = <
-           &kp T  &kp Q  &kp X      &kp E         &kp R        &kp Y      &kp U  &kp I         &kp O    &kp P
-           &kp G  &kp A  &kp W      &kp D         &kp F        &kp H      &kp J  &kp K         &kp L    &kp SEMI
-&kp LSHFT  &kp B  &kp Z  &kp S      &kp C         &kp V        &kp N      &kp M  &kp COMMA     &kp DOT  &kp FSLH  &kp BACKSPACE
-                         &kp LCTRL  &kp LEFT_ALT  &kp SPACE    &kp SPACE  &MOV   &kp LEFT_GUI
+       &kp T           &kp Q  &kp X      &kp E   &kp R        &kp Y      &kp U  &kp I         &kp O    &kp P
+       &kp LEFT_SHIFT  &kp A  &kp W      &kp D   &kp F        &kp H      &kp J  &kp K         &kp L    &kp SEMI
+&kp G  &mt LEFT_ALT B  &kp Z  &kp S      &kp C   &kp V        &kp N      &kp M  &kp COMMA     &kp DOT  &kp FSLH  &kp BACKSPACE
+                              &kp LCTRL  &mo 11  &kp SPACE    &kp SPACE  &MOV   &kp LEFT_GUI
             >;
         };
 
@@ -300,9 +300,9 @@
 
         Num_Gaming {
             bindings = <
-        &kp N6  &kp N7  &kp N8  &kp N9  &kp N0    &none   &none   &none   &none  &none
-        &kp N1  &kp N2  &kp N3  &kp N4  &kp N5    &none   &none   &none   &none  &none
-&trans  &none   &none   &none   &none   &none     &none   &none   &none   &none  &none  &trans
+        &kp N5  &kp N4  &kp N3  &kp N2  &kp N1    &none   &none   &none   &none  &none
+        &none   &none   &none   &none   &none     &none   &none   &none   &none  &none
+&trans  &kp N0  &kp N9  &kp N8  &kp N7  &kp N6    &none   &none   &none   &none  &none  &trans
                         &trans  &trans  &trans    &trans  &trans  &trans
             >;
         };
