@@ -183,7 +183,7 @@
             compatible = "zmk,behavior-tap-dance";
             label = "NUM_MOV";
             #binding-cells = <0>;
-            bindings = <&sl 7>, <&tog 6>;
+            bindings = <&mo 7>, <&tog 6>;
 
             tapping-term-ms = <250>;
         };
