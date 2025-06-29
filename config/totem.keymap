@@ -179,13 +179,13 @@
             flavor = "tap-preferred";
         };
 
-        NUM_MOV: NUM_MOV {
+        ALT_MOV: ALT_MOV {
             compatible = "zmk,behavior-tap-dance";
-            label = "NUM_MOV";
+            label = "ALT_MOV";
             #binding-cells = <0>;
-            bindings = <&mo 6>, <&tog 7>;
+            bindings = <&kp RIGHT_ALT>, <&tog 7>;
 
-            tapping-term-ms = <250>;
+            tapping-term-ms = <300>;
         };
     };
 
@@ -203,10 +203,10 @@
         Rain {
             label = "Base";
             bindings = <
-            &kp F                 &kp D  &kp L         &kp G  &kp V             &kp Q      &kp R     &kp U         &kp O    &kp COMMA
-            &kp S                 &kp T  &kp H         &kp C  &kp Y             &kp J      &kp N     &kp E         &kp A    &kp I
-&CTRL_CAPS  &Left_ALT LEFT_ALT Z  &kp K  &kp M         &kp P  &kp W             &kp X      &kp B     &kp SEMI      &kp SQT  &Right_ALT RIGHT_ALT PERIOD  &Backspace_N_Ctrl RIGHT_CONTROL BACKSPACE
-                                         &kp LEFT_GUI  &sl 5  &sk LEFT_SHIFT    &kp SPACE  &NUM_MOV  &kp LEFT_ALT
+            &kp F                 &kp D  &kp L         &kp G  &kp V             &kp Q      &kp R  &kp U     &kp O    &kp COMMA
+            &kp S                 &kp T  &kp H         &kp C  &kp Y             &kp J      &kp N  &kp E     &kp A    &kp I
+&CTRL_CAPS  &Left_ALT LEFT_ALT Z  &kp K  &kp M         &kp P  &kp W             &kp X      &kp B  &kp SEMI  &kp SQT  &Right_ALT RIGHT_ALT PERIOD  &Backspace_N_Ctrl RIGHT_CONTROL BACKSPACE
+                                         &kp LEFT_GUI  &sl 5  &sk LEFT_SHIFT    &kp SPACE  &mo 6  &ALT_MOV
             >;
         };
 
