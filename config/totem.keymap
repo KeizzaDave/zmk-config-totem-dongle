@@ -205,7 +205,7 @@
             bindings = <
             &kp F                 &kp D  &kp L         &kp G  &kp V             &kp Q      &kp R     &kp U         &kp O    &kp COMMA
             &kp S                 &kp T  &kp H         &kp C  &kp Y             &kp J      &kp N     &kp E         &kp A    &kp I
-&CTRL_CAPS  &Left_ALT LEFT_ALT Z  &kp K  &kp M         &kp P  &kp W             &kp X      &kp B     &kp SEMI      &kp SQT  &Right_ALT RIGHT_ALT PERIOD  &Backspace_N_Ctrl BACKSPACE RIGHT_CONTROL
+&CTRL_CAPS  &Left_ALT LEFT_ALT Z  &kp K  &kp M         &kp P  &kp W             &kp X      &kp B     &kp SEMI      &kp SQT  &Right_ALT RIGHT_ALT PERIOD  &Backspace_N_Ctrl RIGHT_CONTROL BACKSPACE
                                          &kp LEFT_GUI  &sl 5  &sk LEFT_SHIFT    &kp SPACE  &NUM_MOV  &kp LEFT_ALT
             >;
         };
