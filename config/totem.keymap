@@ -29,7 +29,7 @@
     quick-tap-ms = <100>;
     global-quick-tap;
     flavor = "tap-preferred";
-    tapping-term-ms = <170>;
+    tapping-term-ms = <250>;
 };
 
 &sk {
@@ -134,21 +134,29 @@
             tapping-term-ms = <250>;
         };
 
-        SYMG: SYMG {
+        Backspace1: Backspace1 {
             compatible = "zmk,behavior-tap-dance";
-            label = "SYMG";
+            label = "BACKSPACE1";
             #binding-cells = <0>;
-            bindings = <&mo 5>, <&mo 7>;
-
-            tapping-term-ms = <250>;
+            bindings = <&kp BACKSPACE>;
+            tapping-term-ms = <450>;
         };
 
-        Num_Program: Num_Program {
+        Ctrl: Ctrl {
             compatible = "zmk,behavior-tap-dance";
-            label = "NUM_PROGRAM";
+            label = "CTRL";
             #binding-cells = <0>;
-            tapping-term-ms = <250>;
-            bindings = <&none>, <&tog 7>;
+            bindings = <&kp RIGHT_CONTROL>;
+        };
+
+        Backspace_N_Ctrl: Backspace_N_Ctrl {
+            compatible = "zmk,behavior-hold-tap";
+            label = "BACKSPACE_N_CTRL";
+            bindings = <&kp>, <&kp>;
+
+            #binding-cells = <2>;
+            tapping-term-ms = <400>;
+            flavor = "tap-preferred";
         };
     };
 
@@ -168,7 +176,7 @@
             bindings = <
             &kp F           &kp D  &kp L         &kp G     &kp V             &kp Q      &kp R  &kp U         &kp O    &kp COMMA
             &kp S           &kp T  &kp H         &kp C     &kp Y             &kp J      &kp N  &kp E         &kp A    &kp I
-&CTRL_CAPS  &mt LEFT_ALT Z  &kp K  &kp M         &kp P     &kp W             &kp X      &kp B  &kp SEMI      &kp SQT  &kp PERIOD  &kp BACKSPACE
+&CTRL_CAPS  &mt LEFT_ALT Z  &kp K  &kp M         &kp P     &kp W             &kp X      &kp B  &kp SEMI      &kp SQT  &kp PERIOD  &Backspace_N_Ctrl BACKSPACE RIGHT_CONTROL
                                    &kp LEFT_GUI  &SYM_NUM  &sk LEFT_SHIFT    &kp SPACE  &MOV   &kp LEFT_ALT
             >;
         };
