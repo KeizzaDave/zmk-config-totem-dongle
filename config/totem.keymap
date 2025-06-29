@@ -370,5 +370,10 @@
             if-layers = <5 7>;
             then-layer = <6>;
         };
+
+        Mov1 {
+            if-layers = <7 5>;
+            then-layer = <6>;
+        };
     };
 };
