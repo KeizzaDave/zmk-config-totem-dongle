@@ -357,8 +357,13 @@
     conditional_layers {
         compatible = "zmk,conditional-layers";
 
-        MOV {
+        MOVqwer {
             if-layers = <5 6>;
+            then-layer = <7>;
+        };
+
+        MOVaqewr {
+            if-layers = <6 5>;
             then-layer = <7>;
         };
     };
