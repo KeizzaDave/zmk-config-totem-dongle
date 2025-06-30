@@ -51,28 +51,28 @@
             timeout-ms = <30>;
             key-positions = <2 1>;
             bindings = <&kp ESC>;
-            layers = <1 4 7 6 4 0 7 2 3>;
+            layers = <1 4 8 6 4 0 8 2 3>;
         };
 
         enter {
             bindings = <&kp ENTER>;
             key-positions = <16 17 18>;
             timeout-ms = <30>;
-            layers = <1 4 7 6 0 4 7 2 3>;
+            layers = <1 4 8 6 0 4 8 2 3>;
         };
 
         tab {
             bindings = <&kp TAB>;
             key-positions = <13 12>;
             timeout-ms = <30>;
-            layers = <1 4 7 6 0 4 7 2 3>;
+            layers = <1 4 8 6 0 4 8 2 3>;
         };
 
         option {
             bindings = <&mo 10>;
             key-positions = <22 23 21>;
             timeout-ms = <30>;
-            layers = <1 4 0 4 7 2 3>;
+            layers = <1 4 0 4 8 2 3>;
         };
 
         Bluetooth {
@@ -129,7 +129,7 @@
             compatible = "zmk,behavior-tap-dance";
             label = "MOV";
             #binding-cells = <0>;
-            bindings = <&mo 6>, <&tog 8>;
+            bindings = <&mo 6>, <&tog 6>;
 
             tapping-term-ms = <300>;
         };
@@ -251,15 +251,6 @@
             >;
         };
 
-        Num_Progam {
-            bindings = <
-        &none   &none   &none   &none     &none     &none   &none   &none   &none   &kp COMMA
-        &kp N7  &kp N5  &kp N3  &kp N1    &kp N9    &kp N0  &kp N2  &kp N4  &kp N6  &kp N8
-&trans  &none   &none   &none   &none     &none     &none   &none   &none   &none   &kp PERIOD  &trans
-                        &trans  &SYM_NUM  &trans    &trans  &MOV    &trans
-            >;
-        };
-
         Movement {
             // ┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
 
@@ -281,6 +272,15 @@
         &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_UP  &mmv MOVE_RIGHT  &mkp LCLK    &kp F11          &kp LEFT_ARROW  &kp UP_ARROW  &kp DOWN  &kp RIGHT
 &trans  &kp F1          &kp F2          &kp F3        &kp F4           &kp F5       &kp F6           &kp F7          &kp F8        &kp F9    &kp F10     &trans
                                         &trans        &trans           &trans       &trans           &trans          &trans
+            >;
+        };
+
+        Num_Progam {
+            bindings = <
+        &none   &none   &none   &none     &none     &none   &none   &none   &none   &kp COMMA
+        &kp N7  &kp N5  &kp N3  &kp N1    &kp N9    &kp N0  &kp N2  &kp N4  &kp N6  &kp N8
+&trans  &none   &none   &none   &none     &none     &none   &none   &none   &none   &kp PERIOD  &trans
+                        &trans  &SYM_NUM  &trans    &trans  &MOV    &trans
             >;
         };
 
