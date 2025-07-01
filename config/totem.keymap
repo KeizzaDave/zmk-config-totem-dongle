@@ -65,7 +65,7 @@
             bindings = <&kp TAB>;
             key-positions = <13 12>;
             timeout-ms = <30>;
-            layers = <1 4 8 6 0 4 8 2 3>;
+            layers = <4 8 6 0 4 8>;
         };
 
         option {
@@ -95,6 +95,13 @@
             timeout-ms = <50>;
             layers = <1 4 0 4 2 3>;
         };
+
+        tabgaming {
+            bindings = <&kp TAB>;
+            key-positions = <3 2>;
+            timeout-ms = <30>;
+            layers = <1 3 2>;
+        };
     };
 
     behaviors {
@@ -111,7 +118,7 @@
             compatible = "zmk,behavior-tap-dance";
             label = "PRESSY_LAYER";
             #binding-cells = <0>;
-            bindings = <&none>, <&none>, <&tog 14>;
+            bindings = <&none>, <&none>, <&tog 15>;
 
             tapping-term-ms = <250>;
         };
@@ -142,11 +149,13 @@
             tapping-term-ms = <450>;
         };
 
-        Ctrl: Ctrl {
+        mov_game: mov_game {
             compatible = "zmk,behavior-tap-dance";
-            label = "CTRL";
+            label = "MOV_GAME";
             #binding-cells = <0>;
-            bindings = <&kp RIGHT_CONTROL>;
+            bindings = <&mo 5>, <&mo 6>;
+
+            tapping-term-ms = <300>;
         };
 
         Backspace_N_Ctrl: Backspace_N_Ctrl {
@@ -201,33 +210,33 @@
             >;
         };
 
-        Colemak_DH-m {
-            label = "Colemak DH-m Layer";
+        Gaming_Volley {
+            label = "game3";
             bindings = <
-        &kp Q  &kp W  &kp F   &kp P   &kp B     &kp J   &kp L   &kp U      &kp Y    &kp SEMI
-        &kp A  &kp R  &kp S   &kp T   &kp G     &kp M   &kp N   &kp E      &kp I    &kp O
-&trans  &kp Z  &kp X  &kp C   &kp D   &kp V     &kp K   &kp H   &kp COMMA  &kp DOT  &kp APOS  &trans
-                      &trans  &trans  &trans    &trans  &trans  &trans
+                &kp T           &kp Q  &kp X   &kp E             &kp R        &kp Y            &kp U      &kp I         &kp O    &kp P
+                &kp G           &kp A  &kp W   &kp D             &kp F        &kp H            &kp J      &kp K         &kp L    &kp SEMI
+&kp LEFT_SHIFT  &mt LEFT_ALT B  &kp Z  &kp S   &kp C             &kp V        &kp N            &kp M      &kp COMMA     &kp DOT  &kp FSLH  &kp BACKSPACE
+                                       &mo 12  &kp LEFT_CONTROL  &kp SPACE    &kp RIGHT_SHIFT  &mov_game  &kp LEFT_WIN
             >;
         };
 
         Gaming2 {
-            label = "Gaming2";
+            label = "game2";
             bindings = <
-       &kp T           &kp Q  &kp X      &kp E   &kp R        &kp Y      &kp U  &kp I         &kp O    &kp P
-       &kp LEFT_SHIFT  &kp A  &kp W      &kp D   &kp F        &kp H      &kp J  &kp K         &kp L    &kp SEMI
-&kp G  &mt LEFT_ALT B  &kp Z  &kp S      &kp C   &kp V        &kp N      &kp M  &kp COMMA     &kp DOT  &kp FSLH  &kp BACKSPACE
-                              &kp LCTRL  &mo 12  &kp SPACE    &kp SPACE  &MOV   &kp LEFT_GUI
+       &kp T           &kp Q  &kp X      &kp E   &kp R        &kp Y            &kp U      &kp I         &kp O    &kp P
+       &kp LEFT_SHIFT  &kp A  &kp W      &kp D   &kp F        &kp H            &kp J      &kp K         &kp L    &kp SEMI
+&kp G  &mt LEFT_ALT B  &kp Z  &kp S      &kp C   &kp V        &kp N            &kp M      &kp COMMA     &kp DOT  &kp FSLH  &kp BACKSPACE
+                              &kp LCTRL  &mo 12  &kp SPACE    &kp RIGHT_SHIFT  &mov_game  &kp LEFT_GUI
             >;
         };
 
         Gaming {
-            label = "Gaming";
+            label = "game";
             bindings = <
-                    &kp T     &kp Q  &kp X         &kp E   &kp R             &kp Y      &kp U  &kp I         &kp O    &kp P
-                    &kp APOS  &kp A  &kp W         &kp D   &kp F             &kp H      &kp J  &kp K         &kp L    &kp SEMI
-&mt LEFT_CONTROL G  &kp B     &kp Z  &kp S         &kp C   &kp V             &kp N      &kp M  &kp COMMA     &kp DOT  &kp FSLH  &kp BACKSPACE
-                                     &kp LEFT_ALT  &mo 12  &kp LEFT_SHIFT    &kp SPACE  &MOV   &kp LEFT_GUI
+                    &kp T           &kp Q  &kp X         &kp E   &kp R             &kp Y      &kp U      &kp I         &kp O    &kp P
+                    &kp APOS        &kp A  &kp W         &kp D   &kp F             &kp H      &kp J      &kp K         &kp L    &kp SEMI
+&mt LEFT_CONTROL G  &mt LEFT_ALT B  &kp Z  &kp S         &kp C   &kp V             &kp N      &kp M      &kp COMMA     &kp DOT  &kp FSLH  &kp BACKSPACE
+                                           &kp LEFT_ALT  &mo 12  &kp LEFT_SHIFT    &kp SPACE  &mov_game  &kp LEFT_GUI
             >;
         };
 
@@ -320,7 +329,7 @@
             //                                     ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛   ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛
 
             bindings = <
-        &tog 14  &trans  &out OUT_BLE  &out OUT_USB  &trans    &tog 0                &tog 1             &tog 2                &tog 3          &tog 4
+        &tog 15  &trans  &out OUT_BLE  &out OUT_USB  &trans    &tog 0                &tog 1             &tog 2                &tog 3          &tog 4
         &trans   &trans  &trans        &trans        &trans    &kp C_BRIGHTNESS_INC  &kp C_VOLUME_UP    &kp C_BRIGHTNESS_INC  &kp C_PREVIOUS  &kp C_NEXT
 &trans  &trans   &trans  &trans        &trans        &trans    &kp C_BRIGHTNESS_DEC  &kp C_VOLUME_DOWN  &kp C_BRIGHTNESS_DEC  &kp C_PAUSE     &trans      &trans
                          &trans        &trans        &trans    &trans                &trans             &kp C_MUTE
@@ -342,6 +351,16 @@
         &none   &none   &none   &none   &none     &none   &none   &none   &none  &none
 &trans  &kp N6  &kp N7  &kp N8  &kp N9  &kp N0    &none   &none   &none   &none  &none  &trans
                         &trans  &trans  &trans    &trans  &trans  &trans
+            >;
+        };
+
+        mov2 {
+            label = "mov2";
+            bindings = <
+        &mkp RCLK       &msc SCRL_DOWN  &msc SCRL_UP  &kp SLCK         &mkp MB3     &kp PRINTSCREEN  &kp HOME        &kp DEL       &kp END   &kp INSERT
+        &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_UP  &mmv MOVE_RIGHT  &mkp LCLK    &kp F11          &kp LEFT_ARROW  &kp UP_ARROW  &kp DOWN  &kp RIGHT
+&trans  &kp F1          &kp F2          &kp F3        &kp F4           &kp F5       &kp F6           &kp F7          &kp F8        &kp F9    &kp F10     &trans
+                                        &trans        &trans           &trans       &trans           &trans          &trans
             >;
         };
 
@@ -375,6 +394,16 @@
         MOVaqewr {
             if-layers = <6 5>;
             then-layer = <7>;
+        };
+
+        mov_game {
+            if-layers = <12 5>;
+            then-layer = <13>;
+        };
+
+        move2_game {
+            if-layers = <5 7>;
+            then-layer = <13>;
         };
     };
 };
