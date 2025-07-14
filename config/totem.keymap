@@ -184,8 +184,18 @@
             bindings = <&kp>, <&kp>;
 
             #binding-cells = <2>;
-            tapping-term-ms = <400>;
+            tapping-term-ms = <500>;
             flavor = "tap-preferred";
+        };
+
+        new_behavior: new_behavior {
+            compatible = "zmk,behavior-hold-tap";
+            label = "NEW_BEHAVIOR";
+            bindings = <&kp>, <&kp>;
+
+            #binding-cells = <2>;
+            flavor = "tap-preferred";
+            tapping-term-ms = <500>;
         };
     };
 
@@ -256,7 +266,7 @@
         &kp GRAVE    &kp AT_SIGN        &kp HASH         &kp EXCLAMATION       &kp AMPERSAND     &kp DOLLAR     &kp QUESTION      &kp NON_US_BACKSLASH   &kp CARET          &kp LESS_THAN
         &kp PERCENT  &kp LEFT_BRACKET   &kp LEFT_BRACE   &kp LEFT_PARENTHESIS  &kp UNDERSCORE    &kp EQUAL      &kp ASTERISK      &kp RIGHT_PARENTHESIS  &kp PLUS           &kp MINUS
 &trans  &kp TILDE    &kp RIGHT_BRACKET  &kp RIGHT_BRACE  &kp SLASH             &kp PIPE          &kp LESS_THAN  &kp GREATER_THAN  &kp COLON              &kp DOUBLE_QUOTES  &kp GREATER_THAN  &trans
-                                        &trans           &SYM_NUM              &trans            &trans         &MOV              &trans
+                                        &trans           &trans                &trans            &trans         &trans            &trans
             >;
         };
 
@@ -386,12 +396,12 @@
     conditional_layers {
         compatible = "zmk,conditional-layers";
 
-        MOVqwer {
+        num {
             if-layers = <5 6>;
             then-layer = <7>;
         };
 
-        MOVaqewr {
+        num2 {
             if-layers = <6 5>;
             then-layer = <7>;
         };
@@ -402,7 +412,7 @@
         };
 
         move2_game {
-            if-layers = <5 7>;
+            if-layers = <5 12>;
             then-layer = <13>;
         };
     };
