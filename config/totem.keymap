@@ -51,49 +51,49 @@
             timeout-ms = <30>;
             key-positions = <2 1>;
             bindings = <&kp ESC>;
-            layers = <1 4 8 6 4 0 8 2 3>;
+            layers = <1 5 9 7 5 0 9 2 3>;
         };
 
         enter {
             bindings = <&kp ENTER>;
             key-positions = <16 17 18>;
             timeout-ms = <30>;
-            layers = <1 4 8 6 0 4 8 2 3>;
+            layers = <1 5 9 7 0 5 9 2 3>;
         };
 
         tab {
             bindings = <&kp TAB>;
             key-positions = <13 12>;
             timeout-ms = <30>;
-            layers = <4 8 6 0 4 8>;
+            layers = <5 9 7 0 5 9>;
         };
 
         option {
-            bindings = <&mo 10>;
+            bindings = <&mo 11>;
             key-positions = <22 23 21>;
             timeout-ms = <30>;
-            layers = <1 4 0 4 8 2 3>;
+            layers = <1 5 0 5 9 2 3>;
         };
 
         Bluetooth {
-            bindings = <&mo 11>;
+            bindings = <&mo 12>;
             key-positions = <2 3 1>;
             timeout-ms = <100>;
-            layers = <1 4 0 4 2 3>;
+            layers = <1 5 0 5 2 3>;
         };
 
         Option_2 {
-            bindings = <&mo 10>;
+            bindings = <&mo 11>;
             key-positions = <29 28 30>;
             timeout-ms = <30>;
-            layers = <1 4 0 4 2 3>;
+            layers = <1 5 0 5 2 3>;
         };
 
         Reset_Button {
             bindings = <&kp LC(RA(K))>;
             key-positions = <20 31 35 34>;
             timeout-ms = <50>;
-            layers = <1 4 0 4 2 3>;
+            layers = <1 5 0 5 2 3>;
         };
 
         tabgaming {
@@ -118,7 +118,7 @@
             compatible = "zmk,behavior-tap-dance";
             label = "PRESSY_LAYER";
             #binding-cells = <0>;
-            bindings = <&none>, <&none>, <&tog 15>;
+            bindings = <&none>, <&none>, <&tog 16>;
 
             tapping-term-ms = <250>;
         };
@@ -127,7 +127,7 @@
             compatible = "zmk,behavior-tap-dance";
             label = "SYM_NUM";
             #binding-cells = <0>;
-            bindings = <&sl 5>, <&sl 9>;
+            bindings = <&sl 6>, <&sl 10>;
 
             tapping-term-ms = <250>;
         };
@@ -136,7 +136,7 @@
             compatible = "zmk,behavior-tap-dance";
             label = "MOV";
             #binding-cells = <0>;
-            bindings = <&mo 6>, <&tog 6>;
+            bindings = <&mo 7>, <&tog 7>;
 
             tapping-term-ms = <300>;
         };
@@ -153,7 +153,7 @@
             compatible = "zmk,behavior-tap-dance";
             label = "MOV_GAME";
             #binding-cells = <0>;
-            bindings = <&mo 5>, <&mo 6>;
+            bindings = <&mo 6>, <&mo 7>;
 
             tapping-term-ms = <300>;
         };
@@ -216,7 +216,7 @@
             &kp F                 &kp D  &kp L         &kp G  &kp V             &kp Q      &kp R  &kp U          &kp O    &kp COMMA
             &kp S                 &kp T  &kp H         &kp C  &kp Y             &kp J      &kp N  &kp E          &kp A    &kp I
 &CTRL_CAPS  &Left_ALT LEFT_ALT Z  &kp K  &kp M         &kp P  &kp W             &kp X      &kp B  &kp SEMI       &kp SQT  &Right_ALT RIGHT_ALT PERIOD  &Backspace_N_Ctrl RIGHT_CONTROL BACKSPACE
-                                         &kp LEFT_GUI  &sl 5  &sk LEFT_SHIFT    &kp SPACE  &MOV   &kp RIGHT_ALT
+                                         &kp LEFT_GUI  &sl 6  &sk LEFT_SHIFT    &kp SPACE  &MOV   &kp RIGHT_ALT
             >;
         };
 
@@ -226,7 +226,7 @@
                 &kp T           &kp Q  &kp X   &kp E             &kp R        &kp Y            &kp U      &kp I         &kp O    &kp P
                 &kp G           &kp A  &kp W   &kp D             &kp F        &kp H            &kp J      &kp K         &kp L    &kp SEMI
 &kp LEFT_SHIFT  &mt LEFT_ALT B  &kp Z  &kp S   &kp C             &kp V        &kp N            &kp M      &kp COMMA     &kp DOT  &kp FSLH  &kp BACKSPACE
-                                       &mo 12  &kp LEFT_CONTROL  &kp SPACE    &kp RIGHT_SHIFT  &mov_game  &kp LEFT_WIN
+                                       &mo 13  &kp LEFT_CONTROL  &kp SPACE    &kp RIGHT_SHIFT  &mov_game  &kp LEFT_WIN
             >;
         };
 
@@ -236,7 +236,7 @@
        &kp T           &kp Q  &kp X      &kp E   &kp R        &kp Y            &kp U      &kp I         &kp O    &kp P
        &kp LEFT_SHIFT  &kp A  &kp W      &kp D   &kp F        &kp H            &kp J      &kp K         &kp L    &kp SEMI
 &kp G  &mt LEFT_ALT B  &kp Z  &kp S      &kp C   &kp V        &kp N            &kp M      &kp COMMA     &kp DOT  &kp FSLH  &kp BACKSPACE
-                              &kp LCTRL  &mo 12  &kp SPACE    &kp RIGHT_SHIFT  &mov_game  &kp LEFT_GUI
+                              &kp LCTRL  &mo 13  &kp SPACE    &kp RIGHT_SHIFT  &mov_game  &kp LEFT_GUI
             >;
         };
 
@@ -246,7 +246,17 @@
                     &kp T     &kp Q  &kp X         &kp E   &kp R             &kp Y      &kp U      &kp I         &kp O    &kp P
                     &kp APOS  &kp A  &kp W         &kp D   &kp F             &kp H      &kp J      &kp K         &kp L    &kp SEMI
 &mt LEFT_CONTROL G  &kp B     &kp Z  &kp S         &kp C   &kp V             &kp N      &kp M      &kp COMMA     &kp DOT  &kp FSLH  &kp BACKSPACE
-                                     &kp LEFT_ALT  &mo 12  &kp LEFT_SHIFT    &kp SPACE  &mov_game  &kp LEFT_GUI
+                                     &kp LEFT_ALT  &mo 13  &kp LEFT_SHIFT    &kp SPACE  &mov_game  &kp LEFT_GUI
+            >;
+        };
+
+        Factorio {
+            label = "Factorio";
+            bindings = <
+                &kp T     &kp Q  &kp X             &kp E   &kp R             &kp Y      &kp U      &kp I         &kp O    &kp P
+                &kp APOS  &kp A  &kp W             &kp D   &kp F             &kp H      &kp J      &kp K         &kp L    &kp SEMI
+&mt LEFT_ALT G  &kp B     &kp Z  &kp S             &kp C   &kp V             &kp N      &kp M      &kp COMMA     &kp DOT  &kp FSLH  &kp BACKSPACE
+                                 &kp LEFT_CONTROL  &mo 13  &kp LEFT_SHIFT    &kp SPACE  &mov_game  &kp LEFT_GUI
             >;
         };
 
@@ -339,9 +349,9 @@
             //                                     ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛   ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛
 
             bindings = <
-        &tog 15  &trans  &out OUT_BLE  &out OUT_USB  &trans    &tog 0                &tog 1             &tog 2                &tog 3          &tog 4
+        &tog 16  &trans  &out OUT_BLE  &out OUT_USB  &trans    &tog 0                &tog 1             &tog 2                &tog 3          &tog 4
         &trans   &trans  &trans        &trans        &trans    &kp C_BRIGHTNESS_INC  &kp C_VOLUME_UP    &kp C_BRIGHTNESS_INC  &kp C_PREVIOUS  &kp C_NEXT
-&trans  &trans   &trans  &trans        &trans        &trans    &kp C_BRIGHTNESS_DEC  &kp C_VOLUME_DOWN  &kp C_BRIGHTNESS_DEC  &kp C_PAUSE     &trans      &trans
+&trans  &trans   &trans  &trans        &trans        &trans    &kp C_BRIGHTNESS_DEC  &kp C_VOLUME_DOWN  &kp C_BRIGHTNESS_DEC  &kp C_PAUSE     &trans      &tog 5
                          &trans        &trans        &trans    &trans                &trans             &kp C_MUTE
             >;
         };
@@ -397,23 +407,23 @@
         compatible = "zmk,conditional-layers";
 
         num {
-            if-layers = <5 6>;
-            then-layer = <7>;
+            if-layers = <6 7>;
+            then-layer = <8>;
         };
 
         num2 {
-            if-layers = <6 5>;
-            then-layer = <7>;
+            if-layers = <7 6>;
+            then-layer = <8>;
         };
 
         mov_game {
-            if-layers = <12 5>;
-            then-layer = <13>;
+            if-layers = <13 6>;
+            then-layer = <14>;
         };
 
         move2_game {
-            if-layers = <5 12>;
-            then-layer = <13>;
+            if-layers = <6 13>;
+            then-layer = <14>;
         };
     };
 };
