@@ -339,10 +339,10 @@
             //                                     ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛   ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛
 
             bindings = <
-         &tog 4          &tog 3      &tog 2                &tog 1             &tog 0                  &tog 0         &tog 1             &tog 2         &tog 3  &tog 4
-         &kp C_PREVIOUS  &kp C_NEXT  &kp C_BRIGHTNESS_INC  &kp C_VOLUME_UP    &kp C_BRIGHTNESS_INC    &kp C_BRI_UP   &kp C_VOLUME_UP    &kp C_BRI_UP   &none   &none
-&tog 15  &trans          &trans      &kp C_BRIGHTNESS_DEC  &kp C_VOLUME_DOWN  &kp C_BRIGHTNESS_DEC    &kp C_BRI_DEC  &kp C_VOLUME_DOWN  &kp C_BRI_DEC  &none   &trans  &tog 15
-                                     &kp C_PREV            &kp C_NEXT         &kp C_PAUSE             &out OUT_USB   &out OUT_BLE       &kp C_MUTE
+         &tog 4       &tog 3       &tog 2      &tog 1             &tog 0                  &tog 0         &tog 1             &tog 2      &tog 3       &tog 4
+         &none        &none        &none       &kp C_VOLUME_UP    &kp C_BRIGHTNESS_INC    &kp C_BRI_UP   &kp C_VOLUME_UP    &none       &none        &none
+&tog 15  &kp K_POWER  &kp K_SLEEP  &none       &kp C_VOLUME_DOWN  &kp C_BRIGHTNESS_DEC    &kp C_BRI_DEC  &kp C_VOLUME_DOWN  &none       &kp K_SLEEP  &kp K_POWER  &tog 15
+                                   &kp K_PREV  &kp K_NEXT         &kp K_PLAY_PAUSE        &out OUT_USB   &out OUT_BLE       &kp C_MUTE
             >;
         };
 
