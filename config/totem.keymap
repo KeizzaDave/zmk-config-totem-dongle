@@ -209,12 +209,12 @@
 
         // ▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄
 
-        Galliummatrix {
+        graphite-gallium {
             label = "Base";
             bindings = <
-            &kp B                 &kp L  &kp D         &kp C  &kp V             &kp J      &kp Y  &kp O          &kp U     &kp COMMA
-            &kp N                 &kp R  &kp T         &kp S  &kp G             &kp P      &kp H  &kp A          &kp E     &kp I
-&CTRL_CAPS  &Left_ALT LEFT_ALT X  &kp Q  &kp M         &kp W  &kp Z             &kp K      &kp F  &kp SQT        &kp SEMI  &Right_ALT RIGHT_ALT PERIOD  &Backspace_N_Ctrl RIGHT_CONTROL BACKSPACE
+            &kp B                 &kp L  &kp D         &kp W  &kp Z             &kp J      &kp F  &kp O          &kp U     &kp COMMA
+            &kp N                 &kp R  &kp T         &kp S  &kp G             &kp Y      &kp H  &kp A          &kp E     &kp I
+&CTRL_CAPS  &Left_ALT LEFT_ALT X  &kp Q  &kp M         &kp C  &kp V             &kp K      &kp P  &kp SQT        &kp SEMI  &Right_ALT RIGHT_ALT PERIOD  &Backspace_N_Ctrl RIGHT_CONTROL BACKSPACE
                                          &kp LEFT_GUI  &sl 6  &sk LEFT_SHIFT    &kp SPACE  &MOV   &kp RIGHT_ALT
             >;
         };
