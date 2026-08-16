@@ -263,9 +263,9 @@
         rain {
             label = "rain";
             bindings = <
-            &kp B                 &kp L  &kp D         &kp C  &kp V             &kp J      &kp F  &kp O          &kp U     &kp COMMA
-            &kp N                 &kp R  &kp T         &kp S  &kp G             &kp Y      &kp H  &kp A          &kp E     &kp I
-&CTRL_CAPS  &Left_ALT LEFT_ALT X  &kp Q  &kp M         &kp W  &kp Z             &kp K      &kp P  &kp SQT        &kp SEMI  &Right_ALT RIGHT_ALT PERIOD  &Backspace_N_Ctrl RIGHT_CONTROL BACKSPACE
+            &kp F                 &kp D  &kp L         &kp G  &kp V             &kp Q      &kp R  &kp U          &kp O    &kp COMMA
+            &kp S                 &kp T  &kp H         &kp C  &kp Y             &kp J      &kp N  &kp E          &kp A    &kp I
+&CTRL_CAPS  &Left_ALT LEFT_ALT Z  &kp K  &kp M         &kp P  &kp W             &kp X      &kp B  &kp SEMI       &kp SQT  &Right_ALT RIGHT_ALT PERIOD  &Backspace_N_Ctrl RIGHT_CONTROL BACKSPACE
                                          &kp LEFT_GUI  &sl 6  &sk LEFT_SHIFT    &kp SPACE  &MOV   &kp RIGHT_ALT
             >;
         };
