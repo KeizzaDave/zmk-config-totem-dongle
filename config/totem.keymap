@@ -12,11 +12,11 @@
 
 #include <behaviors/mouse_keys.dtsi>
 #include <dt-bindings/zmk/mouse.h>
+#include <behaviors/battery_percentage_printer.dtsi>
 #include <behaviors.dtsi>
 #include <dt-bindings/zmk/bt.h>
 #include <dt-bindings/zmk/keys.h>
 #include <dt-bindings/zmk/pointing.h>
-#include <behaviors/battery_percentage_printer.dtsi>
 
 #define ZMK_POINTING_DEFAULT_MOVE_VAL 4000 // default: 600
 #define ZMK_POINTING_DEFAULT_SCRL_VAL 15    // default: 10
@@ -104,22 +104,23 @@
         };
     };
 
-macros {
+    macros {
         macro_ou: macro_ou {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             wait-ms = <20>;
             tap-ms = <20>;
-            bindings = <&kp O>, <&kp U>;
+            bindings = <&kp O &kp U>;
         };
     };
 
-behaviors {
+    behaviors {
         CTRL_CAPS: CTRL_CAPS {
             compatible = "zmk,behavior-tap-dance";
             label = "CTRL_CAPS";
             #binding-cells = <0>;
             bindings = <&kp LEFT_CONTROL>, <&kp CAPSLOCK>;
+
             tapping-term-ms = <250>;
         };
 
@@ -128,6 +129,7 @@ behaviors {
             label = "PRESSY_LAYER";
             #binding-cells = <0>;
             bindings = <&none>, <&none>, <&tog 16>;
+
             tapping-term-ms = <250>;
         };
 
@@ -136,6 +138,7 @@ behaviors {
             label = "SYM_NUM";
             #binding-cells = <0>;
             bindings = <&sl 6>, <&sl 10>;
+
             tapping-term-ms = <250>;
         };
 
@@ -144,6 +147,7 @@ behaviors {
             label = "MOV";
             #binding-cells = <0>;
             bindings = <&mo 7>, <&tog 7>;
+
             tapping-term-ms = <300>;
         };
 
@@ -160,6 +164,7 @@ behaviors {
             label = "MOV_GAME";
             #binding-cells = <0>;
             bindings = <&mo 6>, <&mo 7>;
+
             tapping-term-ms = <300>;
         };
 
@@ -167,6 +172,7 @@ behaviors {
             compatible = "zmk,behavior-hold-tap";
             label = "BACKSPACE_N_CTRL";
             bindings = <&kp>, <&kp>;
+
             #binding-cells = <2>;
             tapping-term-ms = <400>;
             flavor = "tap-preferred";
@@ -176,6 +182,7 @@ behaviors {
             compatible = "zmk,behavior-hold-tap";
             label = "LEFT_ALT";
             bindings = <&kp>, <&kp>;
+
             #binding-cells = <2>;
             flavor = "tap-preferred";
             tapping-term-ms = <400>;
@@ -185,6 +192,7 @@ behaviors {
             compatible = "zmk,behavior-hold-tap";
             label = "RIGHT_ALT";
             bindings = <&kp>, <&kp>;
+
             #binding-cells = <2>;
             tapping-term-ms = <500>;
             flavor = "tap-preferred";
@@ -194,48 +202,53 @@ behaviors {
             compatible = "zmk,behavior-hold-tap";
             label = "NEW_BEHAVIOR";
             bindings = <&kp>, <&kp>;
+
             #binding-cells = <2>;
             flavor = "tap-preferred";
             tapping-term-ms = <500>;
         };
 
-      magic: magic_key {
+        magic: magic_key {
             compatible = "zmk,behavior-adaptive-key";
             #binding-cells = <0>;
-            
+
             /* Default output kalau nggak ada trigger yang cocok (Repeat Key) */
+
             bindings = <&key_repeat>;
 
-            akt_bu { 
-                trigger-keys = <B>; 
-                max-prior-idle-ms = <300>; 
-                bindings = <&kp U>; 
+            akt_bu {
+                trigger-keys = <B>;
+                max-prior-idle-ms = <300>;
+                bindings = <&kp U>;
             };
-            
-            akt_hcomma { 
-                trigger-keys = <H>; 
-                max-prior-idle-ms = <300>; 
-                bindings = <&kp COMMA>; 
+
+            akt_hcomma {
+                trigger-keys = <H>;
+                max-prior-idle-ms = <300>;
+                bindings = <&kp COMMA>;
             };
-            
-            akt_ny { 
-                trigger-keys = <N>; 
-                max-prior-idle-ms = <300>; 
-                bindings = <&kp Y>; 
+
+            akt_ny {
+                trigger-keys = <N>;
+                max-prior-idle-ms = <300>;
+                bindings = <&kp Y>;
             };
-            
-            akt_rl { 
-                trigger-keys = <R>; 
-                max-prior-idle-ms = <300>; 
-                bindings = <&kp L>; 
+
+            akt_rl {
+                trigger-keys = <R>;
+                max-prior-idle-ms = <300>;
+                bindings = <&kp L>;
             };
-            
+
             /* Rule custom: y + @ = you */
-            akt_you { 
-                trigger-keys = <Y>; 
-                max-prior-idle-ms = <300>; 
+
+            akt_you {
+                trigger-keys = <Y>;
+                max-prior-idle-ms = <300>;
+
                 /* Langsung dieksekusi berurutan: O lalu U */
-                bindings = <&kp O>, <&kp U>; 
+
+                bindings = <&kp O>, <&kp U>;
             };
         };
     };
@@ -245,13 +258,13 @@ behaviors {
 
         // ▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄
 
-        graphite-gallium {
+        sunstone_code {
             label = "Base";
             bindings = <
-            &kp B                 &kp L  &kp D         &kp W  &kp Z             &kp J      &kp F  &kp O          &kp U     &kp COMMA
-            &kp N                 &kp R  &kp T         &kp S  &kp G             &kp Y      &kp H  &kp A          &kp E     &kp I
-&CTRL_CAPS  &Left_ALT LEFT_ALT X  &kp Q  &kp M         &kp C  &kp V             &kp K      &kp P  &kp SQT        &kp SEMI  &Right_ALT RIGHT_ALT PERIOD  &Backspace_N_Ctrl RIGHT_CONTROL BACKSPACE
-                                         &kp LEFT_GUI  &sl 6  &sk LEFT_SHIFT    &kp SPACE  &MOV   &kp RIGHT_ALT
+            &kp V                 &kp D  &kp L  &kp W      &kp SQT           &kp J           &kp F  &kp U    &kp O     &kp COMMA
+            &kp S                 &kp T  &kp R  &magic     &kp M             &kp P           &kp N  &kp I    &kp A     &kp H
+&CTRL_CAPS  &Left_ALT LEFT_ALT Q  &kp K  &kp X  &kp C      &kp G             &kp B           &kp Y  &kp DOT  &kp SEMI  &Right_ALT RIGHT_ALT Z  &Backspace_N_Ctrl RIGHT_CONTROL BACKSPACE
+                                         &sl 6  &kp SPACE  &sk LEFT_SHIFT    &kp LEFT_SHIFT  &kp E  &MOV
             >;
         };
 
@@ -260,7 +273,7 @@ behaviors {
             bindings = <
                 &kp T           &kp Q  &kp X   &kp E             &kp R        &kp Y            &kp U      &kp I         &kp O    &kp P
                 &kp G           &kp A  &kp W   &kp D             &kp F        &kp H            &kp J      &kp K         &kp L    &kp SEMI
-&kp LEFT_SHIFT  &mt LEFT_ALT B  &kp Z  &kp S   &kp C             &kp V        &kp N            &kp M      &kp COMMA     &kp DOT  &kp FSLH   &kp BACKSPACE
+&kp LEFT_SHIFT  &mt LEFT_ALT B  &kp Z  &kp S   &kp C             &kp V        &kp N            &kp M      &kp COMMA     &kp DOT  &kp FSLH  &kp BACKSPACE
                                        &mo 13  &kp LEFT_CONTROL  &kp SPACE    &kp RIGHT_SHIFT  &mov_game  &kp LEFT_WIN
             >;
         };
@@ -270,7 +283,7 @@ behaviors {
             bindings = <
        &kp T           &kp Q  &kp X      &kp E   &kp R        &kp Y            &kp U      &kp I         &kp O    &kp P
        &kp LEFT_SHIFT  &kp A  &kp W      &kp D   &kp F        &kp H            &kp J      &kp K         &kp L    &kp SEMI
-&kp G  &mt LEFT_ALT B  &kp Z  &kp S      &kp C   &kp V        &kp N            &kp M      &kp COMMA     &kp DOT  &kp FSLH   &kp BACKSPACE
+&kp G  &mt LEFT_ALT B  &kp Z  &kp S      &kp C   &kp V        &kp N            &kp M      &kp COMMA     &kp DOT  &kp FSLH  &kp BACKSPACE
                               &kp LCTRL  &mo 13  &kp SPACE    &kp RIGHT_SHIFT  &mov_game  &kp LEFT_GUI
             >;
         };
@@ -280,7 +293,7 @@ behaviors {
             bindings = <
                     &kp T     &kp Q  &kp X         &kp E   &kp R             &kp Y      &kp U      &kp I         &kp O    &kp P
                     &kp APOS  &kp A  &kp W         &kp D   &kp F             &kp H      &kp J      &kp K         &kp L    &kp SEMI
-&mt LEFT_CONTROL G  &kp B     &kp Z  &kp S         &kp C   &kp V             &kp N      &kp M      &kp COMMA     &kp DOT  &kp FSLH   &kp BACKSPACE
+&mt LEFT_CONTROL G  &kp B     &kp Z  &kp S         &kp C   &kp V             &kp N      &kp M      &kp COMMA     &kp DOT  &kp FSLH  &kp BACKSPACE
                                      &kp LEFT_ALT  &mo 13  &kp LEFT_SHIFT    &kp SPACE  &mov_game  &kp LEFT_GUI
             >;
         };
@@ -317,7 +330,6 @@ behaviors {
 
         Movement {
             label = "NAVI";
-
             bindings = <
         &mkp RCLK       &msc SCRL_DOWN  &msc SCRL_UP  &kp SLCK         &mkp MB3     &kp PRINTSCREEN  &kp HOME        &kp DEL       &kp END   &kp INSERT
         &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_UP  &mmv MOVE_RIGHT  &mkp LCLK    &kp F11          &kp LEFT_ARROW  &kp UP_ARROW  &kp DOWN  &kp RIGHT
@@ -356,7 +368,6 @@ behaviors {
 
         Option {
             label = "OPT";
-
             bindings = <
          &tog 4       &tog 3       &tog 2      &tog 1             &tog 0                  &tog 0         &tog 1             &tog 2      &tog 3       &tog 4
          &tog 5       &none        &bapp       &kp C_VOLUME_UP    &kp C_BRIGHTNESS_INC    &kp C_BRI_UP   &kp C_VOLUME_UP    &bapp       &none        &tog 5
