@@ -13,7 +13,7 @@ manifest:
       import: app/west.yml
     - name: zmk-behavior-battery-percentage-printer
       remote: badjeff
-      revision: main
+      revision: v0.3
     - name: zmk-adaptive-key
       remote: urob
       revision: v0.3
