@@ -264,7 +264,7 @@
             bindings = <
             &kp V                 &kp D  &kp L  &kp W      &kp SQT      &kp J          &kp F  &kp U    &kp O     &kp COMMA
             &kp S                 &kp T  &kp R  &magic     &kp M        &kp P          &kp N  &kp I    &kp A     &kp H
-&CTRL_CAPS  &Left_ALT LEFT_ALT Q  &kp K  &kp X  &kp C      &kp G        &kp B          &kp Y  &kp DOT  &kp SEMI  &Right_ALT RIGHT_ALT Z  &Backspace_N_Ctrl RIGHT_CONTROL RIGHT_SHIFT
+&CTRL_CAPS  &Left_ALT LEFT_ALT Q  &kp K  &kp X  &kp C      &kp G        &kp B          &kp Y  &kp DOT  &kp SEMI  &Right_ALT RIGHT_ALT Z  &Backspace_N_Ctrl LEFT_SHIFT LC(BACKSPACE)
                                          &sl 6  &kp SPACE  &sk LCTRL    &kp BACKSPACE  &kp E  &MOV
             >;
         };
