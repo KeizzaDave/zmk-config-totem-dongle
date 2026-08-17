@@ -14,8 +14,8 @@ manifest:
     - name: zmk-behavior-battery-percentage-printer
       remote: badjeff
       revision: main
-    - name: zmk-behavior-adaptive-key
+    - name: zmk-adaptive-key
       remote: urob
-      revision: main
+      revision: v0.3
   self:
     path: config
