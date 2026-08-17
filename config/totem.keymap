@@ -115,7 +115,7 @@
         };
     };
 
-    behaviors {
+behaviors {
         CTRL_CAPS: CTRL_CAPS {
             compatible = "zmk,behavior-tap-dance";
             label = "CTRL_CAPS";
@@ -209,6 +209,36 @@
             tapping-term-ms = <500>;
         };
 
+        adaptive_o: adaptive_o {
+            compatible = "zmk,behavior-adaptive-key";
+            #binding-cells = <0>;
+
+            /* Default output is O */
+            bindings = <&kp O>;
+
+            /* If U was pressed right before this, output I instead */
+            akt_u {
+                trigger-keys = <U>;
+                max-prior-idle-ms = <1000>;
+                bindings = <&kp I>;
+            };
+        };
+
+        adaptive_i: adaptive_i {
+            compatible = "zmk,behavior-adaptive-key";
+            #binding-cells = <0>;
+
+            /* Default output is I */
+            bindings = <&kp I>;
+
+            /* If U was pressed right before this, output O instead */
+            akt_u {
+                trigger-keys = <U>;
+                max-prior-idle-ms = <1000>;
+                bindings = <&kp O>;
+            };
+        };
+
         magic: magic_key {
             compatible = "zmk,behavior-adaptive-key";
             #binding-cells = <0>;
@@ -245,19 +275,6 @@
                 trigger-keys = <Y>;
                 max-prior-idle-ms = <1000>;
                 bindings = <&kp O>, <&kp U>;
-            };
-
-            /* Adaptive rules for U / I / O */
-            akt_u {
-                trigger-keys = <U>;
-                max-prior-idle-ms = <1000>;
-                bindings = <&kp I>;
-            };
-
-            akt_i {
-                trigger-keys = <I>;
-                max-prior-idle-ms = <1000>;
-                bindings = <&kp O>;
             };
         };
     };
