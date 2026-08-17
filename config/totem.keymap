@@ -104,13 +104,22 @@
         };
     };
 
+macros {
+        macro_ou: macro_ou {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            wait-ms = <20>;
+            tap-ms = <20>;
+            bindings = <&kp O>, <&kp U>;
+        };
+    };
+
     behaviors {
         CTRL_CAPS: CTRL_CAPS {
             compatible = "zmk,behavior-tap-dance";
             label = "CTRL_CAPS";
             #binding-cells = <0>;
             bindings = <&kp LEFT_CONTROL>, <&kp CAPSLOCK>;
-
             tapping-term-ms = <250>;
         };
 
@@ -119,7 +128,6 @@
             label = "PRESSY_LAYER";
             #binding-cells = <0>;
             bindings = <&none>, <&none>, <&tog 16>;
-
             tapping-term-ms = <250>;
         };
 
@@ -128,7 +136,6 @@
             label = "SYM_NUM";
             #binding-cells = <0>;
             bindings = <&sl 6>, <&sl 10>;
-
             tapping-term-ms = <250>;
         };
 
@@ -137,7 +144,6 @@
             label = "MOV";
             #binding-cells = <0>;
             bindings = <&mo 7>, <&tog 7>;
-
             tapping-term-ms = <300>;
         };
 
@@ -154,7 +160,6 @@
             label = "MOV_GAME";
             #binding-cells = <0>;
             bindings = <&mo 6>, <&mo 7>;
-
             tapping-term-ms = <300>;
         };
 
@@ -162,7 +167,6 @@
             compatible = "zmk,behavior-hold-tap";
             label = "BACKSPACE_N_CTRL";
             bindings = <&kp>, <&kp>;
-
             #binding-cells = <2>;
             tapping-term-ms = <400>;
             flavor = "tap-preferred";
@@ -172,7 +176,6 @@
             compatible = "zmk,behavior-hold-tap";
             label = "LEFT_ALT";
             bindings = <&kp>, <&kp>;
-
             #binding-cells = <2>;
             flavor = "tap-preferred";
             tapping-term-ms = <400>;
@@ -182,7 +185,6 @@
             compatible = "zmk,behavior-hold-tap";
             label = "RIGHT_ALT";
             bindings = <&kp>, <&kp>;
-
             #binding-cells = <2>;
             tapping-term-ms = <500>;
             flavor = "tap-preferred";
@@ -192,10 +194,34 @@
             compatible = "zmk,behavior-hold-tap";
             label = "NEW_BEHAVIOR";
             bindings = <&kp>, <&kp>;
-
             #binding-cells = <2>;
             flavor = "tap-preferred";
             tapping-term-ms = <500>;
+        };
+
+        magic: magic_key {
+            compatible = "zmk,behavior-adaptive-key";
+            #binding-cells = <0>;
+            
+            /* Kalau nggak ada aturan yang cocok, default-nya jadi Repeat Key */
+            bindings = <&key_repeat>;
+
+            /* Aturan MagicSturdy */
+            bindings-a = <&kp O>;
+            bindings-c = <&kp Y>;
+            bindings-d = <&kp Y>;
+            bindings-e = <&kp U>;
+            bindings-g = <&kp Y>;
+            bindings-l = <&kp K>;
+            bindings-o = <&kp A>;
+            bindings-p = <&kp Y>;
+            bindings-r = <&kp L>;
+            bindings-s = <&kp K>;
+            bindings-t = <&kp M>;
+            bindings-u = <&kp E>;
+            
+            /* Aturan modifikasi: y + * = you */
+            bindings-y = <&macro_ou>;
         };
     };
 
