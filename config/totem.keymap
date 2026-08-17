@@ -199,67 +199,43 @@ behaviors {
             tapping-term-ms = <500>;
         };
 
-        magic: magic_key {
+      magic: magic_key {
             compatible = "zmk,behavior-adaptive-key";
             #binding-cells = <0>;
             
-            /* Default output if no rules match */
+            /* Default output kalau nggak ada trigger yang cocok (Repeat Key) */
             bindings = <&key_repeat>;
 
-            /* MagicSturdy Rules */
-            trigger_a {
-                trigger-keys = <&kp A>;
-                bindings = <&kp O>;
-            };
-            trigger_c {
-                trigger-keys = <&kp C>;
-                bindings = <&kp Y>;
-            };
-            trigger_d {
-                trigger-keys = <&kp D>;
-                bindings = <&kp Y>;
-            };
-            trigger_e {
-                trigger-keys = <&kp E>;
-                bindings = <&kp U>;
-            };
-            trigger_g {
-                trigger-keys = <&kp G>;
-                bindings = <&kp Y>;
-            };
-            trigger_l {
-                trigger-keys = <&kp L>;
-                bindings = <&kp K>;
-            };
-            trigger_o {
-                trigger-keys = <&kp O>;
-                bindings = <&kp A>;
-            };
-            trigger_p {
-                trigger-keys = <&kp P>;
-                bindings = <&kp Y>;
-            };
-            trigger_r {
-                trigger-keys = <&kp R>;
-                bindings = <&kp L>;
-            };
-            trigger_s {
-                trigger-keys = <&kp S>;
-                bindings = <&kp K>;
-            };
-            trigger_t {
-                trigger-keys = <&kp T>;
-                bindings = <&kp M>;
-            };
-            trigger_u {
-                trigger-keys = <&kp U>;
-                bindings = <&kp E>;
+            akt_bu { 
+                trigger-keys = <B>; 
+                max-prior-idle-ms = <300>; 
+                bindings = <&kp U>; 
             };
             
-            /* Custom Rule: y + * = you */
-            trigger_y {
-                trigger-keys = <&kp Y>;
-                bindings = <&kp O>, <&kp U>;
+            akt_hcomma { 
+                trigger-keys = <H>; 
+                max-prior-idle-ms = <300>; 
+                bindings = <&kp COMMA>; 
+            };
+            
+            akt_ny { 
+                trigger-keys = <N>; 
+                max-prior-idle-ms = <300>; 
+                bindings = <&kp Y>; 
+            };
+            
+            akt_rl { 
+                trigger-keys = <R>; 
+                max-prior-idle-ms = <300>; 
+                bindings = <&kp L>; 
+            };
+            
+            /* Rule custom: y + @ = you */
+            akt_you { 
+                trigger-keys = <Y>; 
+                max-prior-idle-ms = <300>; 
+                /* Langsung dieksekusi berurutan: O lalu U */
+                bindings = <&kp O>, <&kp U>; 
             };
         };
     };
