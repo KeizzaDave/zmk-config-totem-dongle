@@ -115,7 +115,7 @@
         };
     };
 
-behaviors {
+    behaviors {
         CTRL_CAPS: CTRL_CAPS {
             compatible = "zmk,behavior-tap-dance";
             label = "CTRL_CAPS";
@@ -214,9 +214,11 @@ behaviors {
             #binding-cells = <0>;
 
             /* Default output is O */
+
             bindings = <&kp O>;
 
             /* If U was pressed right before this, output I instead */
+
             akt_u {
                 trigger-keys = <U>;
                 max-prior-idle-ms = <1000>;
@@ -229,9 +231,11 @@ behaviors {
             #binding-cells = <0>;
 
             /* Default output is I */
+
             bindings = <&kp I>;
 
             /* If U was pressed right before this, output O instead */
+
             akt_u {
                 trigger-keys = <U>;
                 max-prior-idle-ms = <1000>;
@@ -244,6 +248,7 @@ behaviors {
             #binding-cells = <0>;
 
             /* Default output if no trigger matches (Repeat Key) */
+
             bindings = <&key_repeat>;
 
             akt_bu {
@@ -271,6 +276,7 @@ behaviors {
             };
 
             /* Rule custom: y + magic = you */
+
             akt_you {
                 trigger-keys = <Y>;
                 max-prior-idle-ms = <1000>;
@@ -287,9 +293,9 @@ behaviors {
         sunstone_code {
             label = "Base";
             bindings = <
-            &kp V                 &kp D  &kp L  &kp W      &kp SQT      &kp J          &kp F  &kp U    &kp O     &kp COMMA
-            &kp S                 &kp T  &kp R  &magic     &kp M        &kp P          &kp N  &kp I    &kp A     &kp H
-&CTRL_CAPS  &Left_ALT LEFT_ALT Q  &kp K  &kp X  &kp C      &kp G        &kp B          &kp Y  &kp DOT  &kp SEMI  &Right_ALT RIGHT_ALT Z  &Backspace_N_Ctrl LEFT_SHIFT LC(BACKSPACE)
+            &kp V                 &kp D  &kp L  &kp W      &kp SQT      &kp J          &kp F  &kp U        &adaptive_o  &kp COMMA
+            &kp S                 &kp T  &kp R  &magic     &kp M        &kp P          &kp N  &adaptive_i  &kp A        &kp H
+&CTRL_CAPS  &Left_ALT LEFT_ALT Q  &kp K  &kp X  &kp C      &kp G        &kp B          &kp Y  &kp DOT      &kp SEMI     &Right_ALT RIGHT_ALT Z  &Backspace_N_Ctrl LEFT_SHIFT LC(BACKSPACE)
                                          &sl 6  &kp SPACE  &sk LCTRL    &kp BACKSPACE  &kp E  &MOV
             >;
         };
