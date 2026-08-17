@@ -114,7 +114,7 @@ macros {
         };
     };
 
-    behaviors {
+behaviors {
         CTRL_CAPS: CTRL_CAPS {
             compatible = "zmk,behavior-tap-dance";
             label = "CTRL_CAPS";
@@ -203,25 +203,64 @@ macros {
             compatible = "zmk,behavior-adaptive-key";
             #binding-cells = <0>;
             
-            /* Kalau nggak ada aturan yang cocok, default-nya jadi Repeat Key */
+            /* Default output if no rules match */
             bindings = <&key_repeat>;
 
-            /* Aturan MagicSturdy */
-            bindings-a = <&kp O>;
-            bindings-c = <&kp Y>;
-            bindings-d = <&kp Y>;
-            bindings-e = <&kp U>;
-            bindings-g = <&kp Y>;
-            bindings-l = <&kp K>;
-            bindings-o = <&kp A>;
-            bindings-p = <&kp Y>;
-            bindings-r = <&kp L>;
-            bindings-s = <&kp K>;
-            bindings-t = <&kp M>;
-            bindings-u = <&kp E>;
+            /* MagicSturdy Rules */
+            trigger_a {
+                trigger-keys = <&kp A>;
+                bindings = <&kp O>;
+            };
+            trigger_c {
+                trigger-keys = <&kp C>;
+                bindings = <&kp Y>;
+            };
+            trigger_d {
+                trigger-keys = <&kp D>;
+                bindings = <&kp Y>;
+            };
+            trigger_e {
+                trigger-keys = <&kp E>;
+                bindings = <&kp U>;
+            };
+            trigger_g {
+                trigger-keys = <&kp G>;
+                bindings = <&kp Y>;
+            };
+            trigger_l {
+                trigger-keys = <&kp L>;
+                bindings = <&kp K>;
+            };
+            trigger_o {
+                trigger-keys = <&kp O>;
+                bindings = <&kp A>;
+            };
+            trigger_p {
+                trigger-keys = <&kp P>;
+                bindings = <&kp Y>;
+            };
+            trigger_r {
+                trigger-keys = <&kp R>;
+                bindings = <&kp L>;
+            };
+            trigger_s {
+                trigger-keys = <&kp S>;
+                bindings = <&kp K>;
+            };
+            trigger_t {
+                trigger-keys = <&kp T>;
+                bindings = <&kp M>;
+            };
+            trigger_u {
+                trigger-keys = <&kp U>;
+                bindings = <&kp E>;
+            };
             
-            /* Aturan modifikasi: y + * = you */
-            bindings-y = <&macro_ou>;
+            /* Custom Rule: y + * = you */
+            trigger_y {
+                trigger-keys = <&kp Y>;
+                bindings = <&kp O>, <&kp U>;
+            };
         };
     };
 
