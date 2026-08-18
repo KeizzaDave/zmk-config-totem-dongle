@@ -296,7 +296,7 @@
             };
 
             akt_yDOT {
-                trigger-keys = <y>;
+                trigger-keys = <Y>;
                 max-prior-idle-ms = <300>;
                 bindings = <&kp DOT>;
             };
@@ -307,11 +307,6 @@
                 bindings = <&kp Y>;
             };
 
-            akt_ing {
-                trigger-keys = <i>;
-                max-prior-idle-ms = <300>;
-                bindings = <&kp N>, <&kp G>;
-            };
         };
 
         space_ctrl: space_ctrl {
