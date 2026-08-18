@@ -283,12 +283,6 @@
                 bindings = <&kp Y>;
             };
 
-            akt_ny {
-                trigger-keys = <N>;
-                max-prior-idle-ms = <300>;
-                bindings = <&kp Y>;
-            };
-
             akt_rl {
                 trigger-keys = <R>;
                 max-prior-idle-ms = <300>;
