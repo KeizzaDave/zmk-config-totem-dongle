@@ -323,9 +323,9 @@
         sunstone_code {
             label = "Base";
             bindings = <
-            &kp V                 &kp D  &kp L                    &kp W      &kp SQT    &kp J      &kp F  &kp U              &adaptive_o  &kp Y
+            &kp V                 &kp D  &kp L                    &kp W      &kp SQT    &kp COMMA  &kp F  &kp U              &adaptive_o  &kp Y
             &kp S                 &kp T  &kp R                    &magic     &kp M      &kp B      &kp N  &adaptive_i        &kp A        &kp H
-&CTRL_CAPS  &Left_ALT LEFT_ALT Q  &kp K  &kp X                    &kp C      &kp G      &kp COMMA  &kp P  &kp DOT            &kp SEMI     &Right_ALT RIGHT_ALT Z  &sk RIGHT_SHIFT
+&CTRL_CAPS  &Left_ALT LEFT_ALT Q  &kp J  &kp X                    &kp C      &kp G      &kp K      &kp P  &kp DOT            &kp SEMI     &Right_ALT RIGHT_ALT Z  &sk RIGHT_SHIFT
                                          &space_ctrl 0 BACKSPACE  &kp SPACE  &sl 6      &MOV       &kp E  &kp LC(BACKSPACE)
             >;
         };
