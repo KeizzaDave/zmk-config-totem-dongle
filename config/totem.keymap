@@ -300,6 +300,17 @@
                 max-prior-idle-ms = <300>;
                 bindings = <&kp Y>;
             };
+            akt_kn {
+                trigger-keys = <K>;
+                max-prior-idle-ms = <300>;
+                bindings = <&kp N>;
+            };
+
+            akt_nk {
+                trigger-keys = <N>;
+                max-prior-idle-ms = <300>;
+                bindings = <&kp K>;
+            };
         };
 
         space_ctrl: space_ctrl {
