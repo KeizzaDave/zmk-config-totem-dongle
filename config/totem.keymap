@@ -296,7 +296,6 @@
                 bindings = <&kp O>, <&kp U>;
             };
         };
-    };
 
         space_ctrl: space_ctrl {
             compatible = "zmk,behavior-hold-tap";
