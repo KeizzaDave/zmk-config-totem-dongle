@@ -277,10 +277,10 @@
                 bindings = <&kp U>;
             };
 
-            akt_hcomma {
+            akt_hy {
                 trigger-keys = <H>;
                 max-prior-idle-ms = <300>;
-                bindings = <&kp COMMA>;
+                bindings = <&kp Y>;
             };
 
             akt_ny {
@@ -294,13 +294,22 @@
                 max-prior-idle-ms = <300>;
                 bindings = <&kp L>;
             };
-
-            /* Rule custom: y + magic = you */
-
-            akt_you {
-                trigger-keys = <Y>;
+            akt_yDOT {
+                trigger-keys = <y>;
                 max-prior-idle-ms = <300>;
-                bindings = <&kp O>, <&kp U>;
+                bindings = <&kp DOT>;
+            };
+            akt_ay {
+                trigger-keys = <A>;
+                max-prior-idle-ms = <300>;
+                bindings = <&kp Y>;
+            };
+
+
+            akt_ing {
+                trigger-keys = <i>;
+                max-prior-idle-ms = <300>;
+                bindings = <&kp N>, <&kp G>;
             };
         };
 
