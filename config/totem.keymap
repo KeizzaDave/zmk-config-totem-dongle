@@ -234,7 +234,7 @@
 
             akt_u {
                 trigger-keys = <U>;
-                max-prior-idle-ms = <1000>;
+                max-prior-idle-ms = <200>;
                 bindings = <&kp I>;
             };
         };
@@ -251,7 +251,7 @@
 
             akt_u {
                 trigger-keys = <U>;
-                max-prior-idle-ms = <1000>;
+                max-prior-idle-ms = <200>;
                 bindings = <&kp O>;
             };
         };
@@ -266,25 +266,25 @@
 
             akt_bu {
                 trigger-keys = <B>;
-                max-prior-idle-ms = <1000>;
+                max-prior-idle-ms = <300>;
                 bindings = <&kp U>;
             };
 
             akt_hcomma {
                 trigger-keys = <H>;
-                max-prior-idle-ms = <1000>;
+                max-prior-idle-ms = <300>;
                 bindings = <&kp COMMA>;
             };
 
             akt_ny {
                 trigger-keys = <N>;
-                max-prior-idle-ms = <1000>;
+                max-prior-idle-ms = <300>;
                 bindings = <&kp Y>;
             };
 
             akt_rl {
                 trigger-keys = <R>;
-                max-prior-idle-ms = <1000>;
+                max-prior-idle-ms = <300>;
                 bindings = <&kp L>;
             };
 
@@ -292,10 +292,11 @@
 
             akt_you {
                 trigger-keys = <Y>;
-                max-prior-idle-ms = <1000>;
+                max-prior-idle-ms = <300>;
                 bindings = <&kp O>, <&kp U>;
             };
         };
+    };
 
         space_ctrl: space_ctrl {
             compatible = "zmk,behavior-hold-tap";
