@@ -126,6 +126,13 @@
 
             label = "SHORTCUT";
         };
+
+        macro_ng: macro_ng {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&none>;
+            label = "MACRO_NG";
+        };
     };
 
     behaviors {
