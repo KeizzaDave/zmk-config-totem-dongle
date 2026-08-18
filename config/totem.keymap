@@ -300,6 +300,7 @@
                 max-prior-idle-ms = <300>;
                 bindings = <&kp Y>;
             };
+
             akt_kn {
                 trigger-keys = <K>;
                 max-prior-idle-ms = <300>;
@@ -319,8 +320,8 @@
             bindings = <&shortcut>, <&kp>;
 
             #binding-cells = <2>;
-            tapping-term-ms = <140>;
-            quick-tap-ms = <175>;
+            tapping-term-ms = <200>;
+            quick-tap-ms = <150>;
             require-prior-idle-ms = <125>;
             flavor = "balanced";
         };
