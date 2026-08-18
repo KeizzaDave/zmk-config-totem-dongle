@@ -294,17 +294,18 @@
                 max-prior-idle-ms = <300>;
                 bindings = <&kp L>;
             };
+
             akt_yDOT {
                 trigger-keys = <y>;
                 max-prior-idle-ms = <300>;
                 bindings = <&kp DOT>;
             };
+
             akt_ay {
                 trigger-keys = <A>;
                 max-prior-idle-ms = <300>;
                 bindings = <&kp Y>;
             };
-
 
             akt_ing {
                 trigger-keys = <i>;
@@ -334,10 +335,10 @@
         sunstone_code {
             label = "Base";
             bindings = <
-            &kp V                 &kp D  &kp L                    &kp W      &kp SQT    &kp J  &kp F  &kp U              &adaptive_o  &kp COMMA
-            &kp S                 &kp T  &kp R                    &magic     &kp M      &kp P  &kp N  &adaptive_i        &kp A        &kp H
-&CTRL_CAPS  &Left_ALT LEFT_ALT Q  &kp K  &kp X                    &kp C      &kp G      &kp B  &kp Y  &kp DOT            &kp SEMI     &Right_ALT RIGHT_ALT Z  &sk RIGHT_SHIFT
-                                         &space_ctrl 0 BACKSPACE  &kp SPACE  &sl 6      &MOV   &kp E  &kp LC(BACKSPACE)
+            &kp V                 &kp D  &kp L                    &kp W      &kp SQT    &kp J      &kp F  &kp U              &adaptive_o  &kp Y
+            &kp S                 &kp T  &kp R                    &magic     &kp M      &kp B      &kp N  &adaptive_i        &kp A        &kp H
+&CTRL_CAPS  &Left_ALT LEFT_ALT Q  &kp K  &kp X                    &kp C      &kp G      &kp COMMA  &kp P  &kp DOT            &kp SEMI     &Right_ALT RIGHT_ALT Z  &sk RIGHT_SHIFT
+                                         &space_ctrl 0 BACKSPACE  &kp SPACE  &sl 6      &MOV       &kp E  &kp LC(BACKSPACE)
             >;
         };
 
