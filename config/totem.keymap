@@ -35,7 +35,7 @@
 
 &sk {
     quick-release;
-    release-after-ms = <350>;
+    release-after-ms = <1500>;
 };
 
 &soft_off {
