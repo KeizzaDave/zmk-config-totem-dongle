@@ -136,13 +136,13 @@
     };
 
     behaviors {
-        CTRL_CAPS: CTRL_CAPS {
+        Shift_CAPS: Shift_CAPS {
             compatible = "zmk,behavior-tap-dance";
-            label = "CTRL_CAPS";
+            label = "SHIFT_CAPS";
             #binding-cells = <0>;
             bindings = <&sk LEFT_SHIFT>, <&kp CAPSLOCK>;
 
-            tapping-term-ms = <175>;
+            tapping-term-ms = <140>;
         };
 
         Pressy_Layer: Pressy_Layer {
@@ -326,6 +326,15 @@
             flavor = "balanced";
             retro-tap;
         };
+
+        SL6_Windows: SL6_Windows {
+            compatible = "zmk,behavior-tap-dance";
+            label = "SL6_WINDOWS";
+            #binding-cells = <0>;
+            bindings = <&sl 6>, <&kp LGUI>;
+
+            tapping-term-ms = <150>;
+        };
     };
 
     keymap {
@@ -336,10 +345,10 @@
         sunstone_code {
             label = "Base";
             bindings = <
-            &kp V                 &kp D  &kp L                        &kp W      &kp SQT    &kp COMMA  &kp F  &kp U              &adaptive_o  &kp Y
-            &kp S                 &kp T  &kp R                        &magic     &kp M      &kp B      &kp N  &adaptive_i        &kp A        &kp H
-&CTRL_CAPS  &Left_ALT LEFT_ALT Q  &kp J  &kp X                        &kp C      &kp G      &kp K      &kp P  &kp DOT            &kp SEMI     &Right_ALT RIGHT_ALT Z  &sk RIGHT_SHIFT
-                                         &backspace_ctrl 0 BACKSPACE  &kp SPACE  &sl 6      &MOV       &kp E  &kp LC(BACKSPACE)
+             &kp V                 &kp D  &kp L                        &kp W      &kp SQT         &kp COMMA  &kp F  &kp U              &adaptive_o  &kp Y
+             &kp S                 &kp T  &kp R                        &magic     &kp M           &kp B      &kp N  &adaptive_i        &kp A        &kp H
+&Shift_CAPS  &Left_ALT LEFT_ALT Q  &kp J  &kp X                        &kp C      &kp G           &kp K      &kp P  &kp DOT            &kp SEMI     &Right_ALT RIGHT_ALT Z  &sk RIGHT_SHIFT
+                                          &backspace_ctrl 0 BACKSPACE  &kp SPACE  &SL6_Windows    &MOV       &kp E  &kp LC(BACKSPACE)
             >;
         };
 
@@ -386,10 +395,10 @@
         rain {
             label = "rain";
             bindings = <
-            &kp F                 &kp D  &kp L         &kp G   &kp V             &kp Q      &kp R  &kp U          &kp O    &kp COMMA
-            &kp S                 &kp T  &kp H         &kp C   &kp Y             &kp J      &kp N  &kp E          &kp A    &kp I
-&CTRL_CAPS  &Left_ALT LEFT_ALT Z  &kp K  &kp M         &kp P   &kp W             &kp X      &kp B  &kp SEMI       &kp SQT  &Right_ALT RIGHT_ALT PERIOD  &Backspace_N_Ctrl RIGHT_CONTROL BACKSPACE
-                                         &kp LEFT_GUI  &sl 11  &sk LEFT_SHIFT    &kp SPACE  &MOV   &kp RIGHT_ALT
+             &kp F                 &kp D  &kp L         &kp G   &kp V             &kp Q      &kp R  &kp U          &kp O    &kp COMMA
+             &kp S                 &kp T  &kp H         &kp C   &kp Y             &kp J      &kp N  &kp E          &kp A    &kp I
+&Shift_CAPS  &Left_ALT LEFT_ALT Z  &kp K  &kp M         &kp P   &kp W             &kp X      &kp B  &kp SEMI       &kp SQT  &Right_ALT RIGHT_ALT PERIOD  &Backspace_N_Ctrl RIGHT_CONTROL BACKSPACE
+                                          &kp LEFT_GUI  &sl 11  &sk LEFT_SHIFT    &kp SPACE  &MOV   &kp RIGHT_ALT
             >;
         };
 
@@ -398,8 +407,8 @@
             bindings = <
         &kp GRAVE    &kp AT_SIGN        &kp HASH         &kp EXCLAMATION       &kp DOUBLE_QUOTES    &kp AMPERSAND  &kp QUESTION      &kp NON_US_BACKSLASH   &kp CARET  &kp DOLLAR
         &kp PERCENT  &kp LEFT_BRACKET   &kp LEFT_BRACE   &kp LEFT_PARENTHESIS  &kp UNDERSCORE       &kp EQUAL      &kp ASTERISK      &kp RIGHT_PARENTHESIS  &kp PLUS   &kp MINUS
-&trans  &kp TILDE    &kp RIGHT_BRACKET  &kp RIGHT_BRACE  &none                 &kp PIPE             &kp LESS_THAN  &kp GREATER_THAN  &kp SLASH              &kp COLON  &none       &trans
-                                        &trans           &trans                &kp LGUI             &trans         &trans            &trans
+&trans  &kp TILDE    &kp RIGHT_BRACKET  &kp RIGHT_BRACE  &kp PIPE              &kp LGUI             &kp LESS_THAN  &kp GREATER_THAN  &kp SLASH              &kp COLON  &none       &trans
+                                        &trans           &trans                &trans               &trans         &trans            &trans
             >;
         };
 
@@ -415,10 +424,10 @@
         Movement {
             label = "NAVI";
             bindings = <
-        &mkp RCLK       &msc SCRL_DOWN  &msc SCRL_UP  &kp SLCK         &mkp MB3     &kp PRINTSCREEN  &kp HOME        &kp DEL       &kp END   &kp INSERT
-        &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_UP  &mmv MOVE_RIGHT  &mkp LCLK    &kp F11          &kp LEFT_ARROW  &kp UP_ARROW  &kp DOWN  &kp RIGHT
-&trans  &kp F1          &kp F2          &kp F3        &kp F4           &kp F5       &kp F6           &kp F7          &kp F8        &kp F9    &kp F10     &trans
-                                        &trans        &trans           &trans       &trans           &trans          &trans
+        &mkp RCLK       &msc SCRL_DOWN  &msc SCRL_UP  &kp SLCK         &mkp MB3        &kp PRINTSCREEN      &kp HOME         &kp DEL       &kp END   &kp INSERT
+        &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_UP  &mmv MOVE_RIGHT  &mkp LCLK       &kp F11              &kp LEFT_ARROW   &kp UP_ARROW  &kp DOWN  &kp RIGHT
+&trans  &none           &none           &none         &kp LEFT_ALT     &kp LEFT_GUI    &kp LC(PAUSE_BREAK)  &kp PAUSE_BREAK  &none         &none     &none       &trans
+                                        &trans        &trans           &trans          &trans               &trans           &trans
             >;
         };
 
