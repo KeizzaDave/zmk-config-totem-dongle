@@ -379,7 +379,7 @@
         };
 
         BaseMac {
-            label = "BaseMac";
+            label = "Mac";
             bindings = <
              &kp V                 &kp D  &kp L          &kp W      &kp SQT    &kp COMMA  &kp F  &kp U              &adaptive_o  &kp Y
              &kp S                 &kp T  &kp R          &magic     &kp M      &kp B      &kp N  &adaptive_i        &kp A        &kp H
