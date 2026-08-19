@@ -407,7 +407,7 @@
             bindings = <
         &kp GRAVE    &kp AT_SIGN        &kp HASH         &kp EXCLAMATION       &kp DOUBLE_QUOTES    &kp AMPERSAND  &kp QUESTION      &kp NON_US_BACKSLASH   &kp CARET  &kp DOLLAR
         &kp PERCENT  &kp LEFT_BRACKET   &kp LEFT_BRACE   &kp LEFT_PARENTHESIS  &kp UNDERSCORE       &kp EQUAL      &kp ASTERISK      &kp RIGHT_PARENTHESIS  &kp PLUS   &kp MINUS
-&trans  &kp TILDE    &kp RIGHT_BRACKET  &kp RIGHT_BRACE  &kp PIPE              &kp LGUI             &kp LESS_THAN  &kp GREATER_THAN  &kp SLASH              &kp COLON  &none       &trans
+&trans  &kp TILDE    &kp RIGHT_BRACKET  &kp RIGHT_BRACE  &kp PIPE              &kp LEFT_GUI         &kp LESS_THAN  &kp GREATER_THAN  &kp SLASH              &kp COLON  &none       &trans
                                         &trans           &trans                &trans               &trans         &trans            &trans
             >;
         };
