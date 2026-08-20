@@ -280,8 +280,6 @@
             compatible = "zmk,behavior-adaptive-key";
             #binding-cells = <0>;
             bindings = <&key_repeat>;
-            strict-modifiers = <0>;
-            
 
             /* Default output if no trigger matches (Repeat Key) */
 
