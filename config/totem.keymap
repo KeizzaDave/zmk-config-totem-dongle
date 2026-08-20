@@ -510,7 +510,7 @@
          &tog 5       &tog 4       &tog 3      &tog 2             &tog 0                  &tog 0         &tog 2             &tog 3        &tog 4       &tog 5
          &tog 6       &none        &bapp       &kp C_VOLUME_UP    &kp C_BRIGHTNESS_INC    &kp C_BRI_UP   &kp C_VOLUME_UP    &bapp         &none        &tog 6
 &tog 19  &kp C_POWER  &kp C_SLEEP  &tog 1      &kp C_VOLUME_DOWN  &kp C_BRIGHTNESS_DEC    &kp C_BRI_DEC  &kp C_VOLUME_DOWN  &tog 1        &kp C_SLEEP  &kp C_POWER  &tog 19
-                                   &kp C_PREV  &kp C_PP           &kp C_NEXT              &out OUT_USB   &kp C_MUTE         &out OUT_USB
+                                   &kp K_PREV  &kp K_PLAY_PAUSE   &kp K_NEXT              &out OUT_USB   &kp K_MUTE         &out OUT_USB
             >;
         };
 
