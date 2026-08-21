@@ -155,7 +155,7 @@
             #binding-cells = <0>;
             bindings = <&sk LEFT_SHIFT>, <&kp CAPSLOCK>;
 
-            tapping-term-ms = <140>;
+            tapping-term-ms = <250>;
         };
 
         Pressy_Layer: Pressy_Layer {
