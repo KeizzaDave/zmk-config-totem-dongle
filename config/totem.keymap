@@ -285,43 +285,43 @@
 
             akt_bu {
                 trigger-keys = <B>;
-                max-prior-idle-ms = <300>;
+                max-prior-idle-ms = <1000>;
                 bindings = <&kp U>;
             };
 
             akt_hy {
                 trigger-keys = <H>;
-                max-prior-idle-ms = <300>;
+                max-prior-idle-ms = <1000>;
                 bindings = <&kp Y>;
             };
 
             akt_rl {
                 trigger-keys = <R>;
-                max-prior-idle-ms = <300>;
+                max-prior-idle-ms = <1000>;
                 bindings = <&kp L>;
             };
 
             akt_yDOT {
                 trigger-keys = <Y>;
-                max-prior-idle-ms = <300>;
+                max-prior-idle-ms = <1000>;
                 bindings = <&kp DOT>;
             };
 
             akt_ay {
                 trigger-keys = <A>;
-                max-prior-idle-ms = <300>;
+                max-prior-idle-ms = <1000>;
                 bindings = <&kp Y>;
             };
 
             akt_kn {
                 trigger-keys = <K>;
-                max-prior-idle-ms = <300>;
+                max-prior-idle-ms = <1000>;
                 bindings = <&kp N>;
             };
 
             akt_nk {
                 trigger-keys = <N>;
-                max-prior-idle-ms = <300>;
+                max-prior-idle-ms = <1000>;
                 bindings = <&kp K>;
             };
         };
