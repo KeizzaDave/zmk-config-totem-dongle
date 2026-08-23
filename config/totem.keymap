@@ -247,14 +247,12 @@
             #binding-cells = <0>;
 
             /* Default output is O */
-
             bindings = <&kp O>;
 
             /* If U was pressed right before this, output I instead */
-
             akt_u {
                 trigger-keys = <U>;
-                max-prior-idle-ms = <200>;
+                max-prior-idle-ms = <1000>;
                 bindings = <&kp I>;
             };
         };
@@ -264,18 +262,45 @@
             #binding-cells = <0>;
 
             /* Default output is I */
-
             bindings = <&kp I>;
 
             /* If U was pressed right before this, output O instead */
-
             akt_u {
                 trigger-keys = <U>;
-                max-prior-idle-ms = <200>;
+                max-prior-idle-ms = <1000>;
                 bindings = <&kp O>;
             };
         };
 
+        adaptive_y: adaptive_y {
+            compatible = "zmk,behavior-adaptive-key";
+            #binding-cells = <0>;
+
+            /* Default output is Y */
+            bindings = <&kp Y>;
+
+            /* If E was pressed right before this, output U instead */
+            akt_e {
+                trigger-keys = <E>;
+                max-prior-idle-ms = <1000>;
+                bindings = <&kp U>;
+            };
+        };
+
+        adaptive_u: adaptive_u {
+            compatible = "zmk,behavior-adaptive-key";
+            #binding-cells = <0>;
+
+            /* Default output is U */
+            bindings = <&kp U>;
+
+            /* If E was pressed right before this, output Y instead */
+            akt_e {
+                trigger-keys = <E>;
+                max-prior-idle-ms = <1000>;
+                bindings = <&kp Y>;
+            };
+        };
         magic: magic_key {
             compatible = "zmk,behavior-adaptive-key";
             #binding-cells = <0>;
