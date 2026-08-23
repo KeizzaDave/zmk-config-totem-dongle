@@ -247,9 +247,11 @@
             #binding-cells = <0>;
 
             /* Default output is O */
+
             bindings = <&kp O>;
 
             /* If U was pressed right before this, output I instead */
+
             akt_u {
                 trigger-keys = <U>;
                 max-prior-idle-ms = <1000>;
@@ -262,9 +264,11 @@
             #binding-cells = <0>;
 
             /* Default output is I */
+
             bindings = <&kp I>;
 
             /* If U was pressed right before this, output O instead */
+
             akt_u {
                 trigger-keys = <U>;
                 max-prior-idle-ms = <1000>;
@@ -277,9 +281,11 @@
             #binding-cells = <0>;
 
             /* Default output is Y */
+
             bindings = <&kp Y>;
 
             /* If E was pressed right before this, output U instead */
+
             akt_e {
                 trigger-keys = <E>;
                 max-prior-idle-ms = <1000>;
@@ -292,15 +298,18 @@
             #binding-cells = <0>;
 
             /* Default output is U */
+
             bindings = <&kp U>;
 
             /* If E was pressed right before this, output Y instead */
+
             akt_e {
                 trigger-keys = <E>;
                 max-prior-idle-ms = <1000>;
                 bindings = <&kp Y>;
             };
         };
+
         magic: magic_key {
             compatible = "zmk,behavior-adaptive-key";
             #binding-cells = <0>;
@@ -395,7 +404,7 @@
         sunstone_code {
             label = "Base";
             bindings = <
-             &kp V                 &kp D  &kp L                        &kp W      &kp SQT    &kp COMMA  &kp F  &kp U              &adaptive_o  &kp Y
+             &kp V                 &kp D  &kp L                        &kp W      &kp SQT    &kp COMMA  &kp F  &adaptive_u        &adaptive_o  &adaptive_y
              &kp S                 &kp T  &kp R                        &magic     &kp M      &kp B      &kp N  &adaptive_i        &kp A        &kp H
 &Shift_CAPS  &Left_ALT LEFT_ALT Q  &kp J  &kp X                        &kp C      &kp G      &kp K      &kp P  &kp DOT            &kp SEMI     &Right_ALT RIGHT_ALT Z  &sk RIGHT_SHIFT
                                           &backspace_ctrl 0 BACKSPACE  &kp SPACE  &sl 7      &MOV       &kp E  &kp LC(BACKSPACE)
