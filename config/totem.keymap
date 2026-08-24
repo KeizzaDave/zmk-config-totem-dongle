@@ -310,6 +310,30 @@
             };
         };
 
+/* 1. Adaptive key assigned to your '=' slot */
+        adaptive_equal: adaptive_equal {
+            compatible = "zmk,behavior-adaptive-key";
+            #binding-cells = <0>;
+
+            /* Default output is = */
+            bindings = <&kp EQUAL>;
+
+            /* Pressing ) then = outputs >= */
+            akt_rpar {
+                trigger-keys = <RPAR>;
+                max-prior-idle-ms = <1000>;
+                bindings = <&kp GT>;
+            };
+
+            /* Pressing ( then = outputs <= */
+            akt_lpar {
+                trigger-keys = <LPAR>;
+                max-prior-idle-ms = <1000>;
+                bindings = <&kp LT>;
+            };
+        };
+
+        /* 2. Adaptive key assigned to your ')' slot */
         adaptive_rpar: adaptive_rpar {
             compatible = "zmk,behavior-adaptive-key";
             #binding-cells = <0>;
