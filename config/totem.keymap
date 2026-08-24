@@ -310,19 +310,14 @@
             };
         };
 
-        /* 1. Adaptive key assigned to your '=' slot */
-        /* Adaptive key untuk tombol ')' */
-
         adaptive_rpar: adaptive_rpar {
             compatible = "zmk,behavior-adaptive-key";
             #binding-cells = <0>;
 
             /* Output default adalah ')' */
-
             bindings = <&kp RPAR>;
-
+        
             /* Kalau sebelum tombol ini dipencet '>' (GT), ubah output ')' jadi '=' (hasil akhir: '>=') */
-
             akt_gt {
                 trigger-keys = <GT>;
                 max-prior-idle-ms = <1000>;
@@ -330,11 +325,17 @@
             };
 
             /* Kalau sebelum tombol ini dipencet '<' (LT), ubah output ')' jadi '=' (hasil akhir: '<=') */
-
             akt_lt {
                 trigger-keys = <LT>;
                 max-prior-idle-ms = <1000>;
                 bindings = <&kp EQUAL>;
+            };
+        
+            /* Kalau sebelum tombol ini dipencet '=' (EQUAL), ubah output ')' jadi '>' (hasil akhir: '=>') */
+            akt_eq {
+                trigger-keys = <EQUAL>;
+                max-prior-idle-ms = <1000>;
+                bindings = <&kp GREATER_THAN>;
             };
         };
 
