@@ -312,28 +312,26 @@
 
         /* 1. Adaptive key assigned to your '=' slot */
 
-        adaptive_equal: adaptive_equal {
+        /* Adaptive key untuk tombol ')' */
+        adaptive_rpar: adaptive_rpar {
             compatible = "zmk,behavior-adaptive-key";
             #binding-cells = <0>;
 
-            /* Default output is = */
+            /* Output default adalah ')' */
+            bindings = <&kp RPAR>;
 
-            bindings = <&kp EQUAL>;
-
-            /* Pressing ) then = outputs >= */
-
-            akt_rpar {
-                trigger-keys = <RPAR>;
+            /* Kalau sebelum tombol ini dipencet '>' (GT), ubah output ')' jadi '=' (hasil akhir: '>=') */
+            akt_gt {
+                trigger-keys = <GT>;
                 max-prior-idle-ms = <1000>;
-                bindings = <&kp GT>;
+                bindings = <&kp EQUAL>;
             };
 
-            /* Pressing ( then = outputs <= */
-
-            akt_lpar {
-                trigger-keys = <LPAR>;
+            /* Kalau sebelum tombol ini dipencet '<' (LT), ubah output ')' jadi '=' (hasil akhir: '<=') */
+            akt_lt {
+                trigger-keys = <LT>;
                 max-prior-idle-ms = <1000>;
-                bindings = <&kp LT>;
+                bindings = <&kp EQUAL>;
             };
         };
 
