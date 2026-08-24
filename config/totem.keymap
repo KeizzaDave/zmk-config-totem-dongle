@@ -335,25 +335,6 @@
             };
         };
 
-        /* 2. Adaptive key assigned to your ')' slot */
-
-        adaptive_rpar: adaptive_rpar {
-            compatible = "zmk,behavior-adaptive-key";
-            #binding-cells = <0>;
-
-            /* Default output is ) */
-
-            bindings = <&kp RPAR>;
-
-            /* If = was pressed right before this, output > instead */
-
-            akt_equal {
-                trigger-keys = <EQUAL>;
-                max-prior-idle-ms = <1000>;
-                bindings = <&kp GT>;
-            };
-        };
-
         magic: magic_key {
             compatible = "zmk,behavior-adaptive-key";
             #binding-cells = <0>;
