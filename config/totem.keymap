@@ -526,10 +526,10 @@
         Movement {
             label = "NAVI";
             bindings = <
-        &mkp RCLK       &msc SCRL_DOWN  &msc SCRL_UP  &kp SLCK         &mkp MB3        &kp PRINTSCREEN  &kp HOME        &kp DEL       &kp END     &kp INSERT
-        &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_UP  &mmv MOVE_RIGHT  &mkp LCLK       &kp F11          &kp LEFT_ARROW  &kp UP_ARROW  &kp DOWN    &kp RIGHT
-&trans  &none           &kp LEFT_SHIFT  &kp LCTRL     &kp LEFT_ALT     &kp LEFT_GUI    &kp RGUI         &kp RIGHT_ALT   &kp RCTRL     &kp RSHIFT  &none       &trans
-                                        &trans        &trans           &trans          &trans           &trans          &trans
+        &mkp RCLK       &msc SCRL_DOWN  &msc SCRL_UP  &kp SLCK         &mkp MB3     &kp PRINTSCREEN  &kp HOME        &kp DEL       &kp END        &kp INSERT
+        &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_UP  &mmv MOVE_RIGHT  &mkp LCLK    &kp F11          &kp LEFT_ARROW  &kp UP_ARROW  &kp DOWN       &kp RIGHT
+&trans  &kp LEFT_SHIFT  &kp LEFT_ALT    &kp LCTRL     &kp LGUI         &kp BSPC     &kp BSPC         &kp RGUI        &kp RCTRL     &kp RIGHT_ALT  &kp RIGHT_SHIFT  &trans
+                                        &trans        &trans           &trans       &trans           &trans          &trans
             >;
         };
 
