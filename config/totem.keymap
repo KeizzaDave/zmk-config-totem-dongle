@@ -311,16 +311,18 @@
         };
 
         /* 1. Adaptive key assigned to your '=' slot */
-
         /* Adaptive key untuk tombol ')' */
+
         adaptive_rpar: adaptive_rpar {
             compatible = "zmk,behavior-adaptive-key";
             #binding-cells = <0>;
 
             /* Output default adalah ')' */
+
             bindings = <&kp RPAR>;
 
             /* Kalau sebelum tombol ini dipencet '>' (GT), ubah output ')' jadi '=' (hasil akhir: '>=') */
+
             akt_gt {
                 trigger-keys = <GT>;
                 max-prior-idle-ms = <1000>;
@@ -328,6 +330,7 @@
             };
 
             /* Kalau sebelum tombol ini dipencet '<' (LT), ubah output ')' jadi '=' (hasil akhir: '<=') */
+
             akt_lt {
                 trigger-keys = <LT>;
                 max-prior-idle-ms = <1000>;
@@ -486,10 +489,10 @@
         Special_Characters {
             label = "SYM";
             bindings = <
-        &kp GRAVE    &kp AT_SIGN        &kp HASH         &kp EXCLAMATION       &kp DOUBLE_QUOTES    &kp AMPERSAND    &kp QUESTION      &kp FSLH        &kp DOLLAR  &kp CARET
-        &kp PERCENT  &kp LEFT_BRACKET   &kp LEFT_BRACE   &kp LEFT_PARENTHESIS  &kp UNDERSCORE       &adaptive_equal  &kp ASTERISK      &adaptive_rpar  &kp PLUS    &kp MINUS
-&trans  &kp TILDE    &kp RIGHT_BRACKET  &kp RIGHT_BRACE  &kp LGUI              &none                &kp LESS_THAN    &kp GREATER_THAN  &kp BSLH        &kp COLON   &none      &kp PIPE
-                                        &trans           &trans                &trans               &trans           &trans            &trans
+        &kp GRAVE    &kp AT_SIGN        &kp HASH         &kp EXCLAMATION       &kp DOUBLE_QUOTES    &kp AMPERSAND  &kp QUESTION      &kp FSLH        &kp DOLLAR  &kp CARET
+        &kp PERCENT  &kp LEFT_BRACKET   &kp LEFT_BRACE   &kp LEFT_PARENTHESIS  &kp UNDERSCORE       &kp EQUAL      &kp ASTERISK      &adaptive_rpar  &kp PLUS    &kp MINUS
+&trans  &kp TILDE    &kp RIGHT_BRACKET  &kp RIGHT_BRACE  &kp LGUI              &none                &kp LESS_THAN  &kp GREATER_THAN  &kp BSLH        &kp COLON   &none      &kp PIPE
+                                        &trans           &trans                &trans               &trans         &trans            &trans
             >;
         };
 
