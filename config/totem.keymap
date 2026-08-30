@@ -101,7 +101,7 @@
             bindings = <&kp TAB>;
             key-positions = <3 2>;
             timeout-ms = <30>;
-            layers = <2 4 3>;
+            layers = <2 4 3 5>;
         };
     };
 
@@ -427,7 +427,7 @@
              &kp V                 &kp D  &kp L                        &kp W      &kp G      &kp COMMA  &kp F  &adaptive_u        &adaptive_o  &adaptive_y
              &kp S                 &kp T  &kp R                        &magic     &kp M      &kp B      &kp N  &adaptive_i        &kp A        &kp H
 &Shift_CAPS  &Left_ALT LEFT_ALT Q  &kp J  &kp X                        &kp C      &kp SQT    &kp K      &kp P  &kp DOT            &kp SEMI     &Right_ALT RIGHT_ALT Z  &sk RIGHT_SHIFT
-                                          &backspace_ctrl 0 BACKSPACE  &kp SPACE  &MOV       &sl 7      &kp E  &kp LC(BACKSPACE)
+                                          &backspace_ctrl 0 BACKSPACE  &kp SPACE  &MOV       &sl 8      &kp E  &kp LC(BACKSPACE)
             >;
         };
 
@@ -619,22 +619,22 @@
         compatible = "zmk,conditional-layers";
 
         num {
-            if-layers = <7 9>;
+            if-layers = <9 8>;
             then-layer = <10>;
         };
 
         num2 {
-            if-layers = <9 7>;
+            if-layers = <9 8>;
             then-layer = <10>;
         };
 
         mov_game {
-            if-layers = <16 7>;
+            if-layers = <16 8>;
             then-layer = <17>;
         };
 
         move2_game {
-            if-layers = <7 16>;
+            if-layers = <16 8>;
             then-layer = <17>;
         };
     };
