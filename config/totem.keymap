@@ -103,6 +103,13 @@
             timeout-ms = <30>;
             layers = <2 4 3 5>;
         };
+
+        Ctrl+Space {
+            bindings = <&kp LC(SPACE)>;
+            key-positions = <6 7>;
+            layers = <0 1 8 9>;
+            timeout-ms = <30>;
+        };
     };
 
     macros {
@@ -422,9 +429,9 @@
 
             #binding-cells = <2>;
             flavor = "balanced";
-            tapping-term-ms = <150>;
-            quick-tap-ms = <0>;
-            require-prior-idle-ms = <0>;
+            tapping-term-ms = <200>;
+            quick-tap-ms = <150>;
+            require-prior-idle-ms = <125>;
         };
     };
 
@@ -446,10 +453,10 @@
         BaseMac {
             label = "Mac";
             bindings = <
-             &kp V                 &kp D  &kp L          &kp W      &kp SQT    &kp COMMA  &kp F  &kp U              &adaptive_o  &kp Y
-             &kp S                 &kp T  &kp R          &magic     &kp M      &kp B      &kp N  &adaptive_i        &kp A        &kp H
-&Shift_CAPS  &Left_ALT LEFT_ALT Q  &kp J  &kp X          &kp C      &kp G      &kp K      &kp P  &kp DOT            &kp SEMI     &Right_ALT RIGHT_ALT Z  &sk RIGHT_SHIFT
-                                          &mac_shortcut  &kp SPACE  &sl 7      &MOV       &kp E  &kp LA(BACKSPACE)
+             &kp V                 &kp D  &kp L          &kp W      &kp G                      &kp COMMA  &kp F  &adaptive_u        &adaptive_o  &adaptive_y
+             &kp S                 &kp T  &kp R          &magic     &kp M                      &kp B      &kp N  &adaptive_i        &kp A        &kp H
+&Shift_CAPS  &Left_ALT LEFT_ALT Q  &kp J  &kp X          &kp C      &kp SQT                    &kp K      &kp P  &kp DOT            &kp SEMI     &Right_ALT RIGHT_ALT Z  &sk RIGHT_SHIFT
+                                          &mac_shortcut  &kp SPACE  &Shift_Mov 8 LEFT_SHIFT    &sl 9      &kp E  &kp LA(BACKSPACE)
             >;
         };
 
