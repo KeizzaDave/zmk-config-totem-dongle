@@ -52,21 +52,21 @@
             timeout-ms = <30>;
             key-positions = <2 1>;
             bindings = <&kp ESC>;
-            layers = <2 5 13 9 5 0 13 3 4 6>;
+            layers = <2 5 13 8 5 0 13 3 4 6>;
         };
 
         enter {
             bindings = <&kp ENTER>;
             key-positions = <16 17 18>;
             timeout-ms = <30>;
-            layers = <2 5 13 9 0 5 13 3 4 6>;
+            layers = <2 5 13 8 0 5 13 3 4 6>;
         };
 
         tab {
             bindings = <&kp TAB>;
             key-positions = <13 12>;
             timeout-ms = <30>;
-            layers = <5 13 9 0 5 13 6>;
+            layers = <5 13 8 0 5 13 6>;
         };
 
         option {
@@ -180,7 +180,7 @@
             compatible = "zmk,behavior-tap-dance";
             label = "MOV";
             #binding-cells = <0>;
-            bindings = <&mo 9>, <&tog 9>;
+            bindings = <&mo 8>, <&tog 8>;
 
             tapping-term-ms = <300>;
         };
@@ -197,7 +197,7 @@
             compatible = "zmk,behavior-tap-dance";
             label = "MOV_GAME";
             #binding-cells = <0>;
-            bindings = <&mo 7>, <&mo 9>;
+            bindings = <&mo 7>, <&mo 8>;
 
             tapping-term-ms = <300>;
         };
@@ -427,7 +427,7 @@
              &kp V                 &kp D  &kp L                        &kp W      &kp G      &kp COMMA  &kp F  &adaptive_u        &adaptive_o  &adaptive_y
              &kp S                 &kp T  &kp R                        &magic     &kp M      &kp B      &kp N  &adaptive_i        &kp A        &kp H
 &Shift_CAPS  &Left_ALT LEFT_ALT Q  &kp J  &kp X                        &kp C      &kp SQT    &kp K      &kp P  &kp DOT            &kp SEMI     &Right_ALT RIGHT_ALT Z  &sk RIGHT_SHIFT
-                                          &backspace_ctrl 0 BACKSPACE  &kp SPACE  &MOV       &sl 8      &kp E  &kp LC(BACKSPACE)
+                                          &backspace_ctrl 0 BACKSPACE  &kp SPACE  &MOV       &sl 9      &kp E  &kp LC(BACKSPACE)
             >;
         };
 
@@ -500,6 +500,16 @@
             >;
         };
 
+        Movement {
+            label = "NAVI";
+            bindings = <
+        &mkp RCLK       &msc SCRL_DOWN  &msc SCRL_UP  &mkp LCLK        &mkp MB3          &kp PRINTSCREEN  &kp HOME        &kp DEL       &kp END        &kp INSERT
+        &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_UP  &mmv MOVE_RIGHT  &kp BSPC          &kp BSPC         &kp LEFT_ARROW  &kp UP_ARROW  &kp DOWN       &kp RIGHT
+&trans  &sk LEFT_SHIFT  &kp LEFT_ALT    &kp LCTRL     &kp LGUI         &kp SCROLLLOCK    &kp F11          &kp RGUI        &kp RCTRL     &kp RIGHT_ALT  &sk RIGHT_SHIFT  &trans
+                                        &trans        &trans           &trans            &trans           &trans          &trans
+            >;
+        };
+
         Special_Characters {
             label = "SYM";
             bindings = <
@@ -507,16 +517,6 @@
         &kp PERCENT  &kp LEFT_BRACKET   &kp LEFT_BRACE   &kp LEFT_PARENTHESIS  &kp UNDERSCORE       &kp EQUAL      &kp ASTERISK      &adaptive_rpar  &kp PLUS    &kp MINUS
 &trans  &kp TILDE    &kp RIGHT_BRACKET  &kp RIGHT_BRACE  &kp LGUI              &kp DOUBLE_QUOTES    &kp LESS_THAN  &kp GREATER_THAN  &kp BSLH        &kp COLON   &none      &kp PIPE
                                         &trans           &trans                &trans               &trans         &trans            &trans
-            >;
-        };
-
-        Movement {
-            label = "NAVI";
-            bindings = <
-        &mkp RCLK       &msc SCRL_DOWN  &msc SCRL_UP  &mkp LCLK        &mkp MB3          &kp PRINTSCREEN  &kp HOME        &kp DEL       &kp END        &kp INSERT
-        &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_UP  &mmv MOVE_RIGHT  &kp BSPC          &kp BSPC         &kp LEFT_ARROW  &kp UP_ARROW  &kp DOWN       &kp RIGHT
-&trans  &kp LEFT_SHIFT  &kp LEFT_ALT    &kp LCTRL     &kp LGUI         &kp SCROLLLOCK    &kp F11          &kp RGUI        &kp RCTRL     &kp RIGHT_ALT  &kp RIGHT_SHIFT  &trans
-                                        &trans        &trans           &trans            &trans           &trans          &trans
             >;
         };
 
@@ -619,22 +619,22 @@
         compatible = "zmk,conditional-layers";
 
         num {
-            if-layers = <9 8>;
+            if-layers = <8 9>;
             then-layer = <10>;
         };
 
         num2 {
-            if-layers = <9 8>;
+            if-layers = <8 9>;
             then-layer = <10>;
         };
 
         mov_game {
-            if-layers = <16 8>;
+            if-layers = <16 9>;
             then-layer = <17>;
         };
 
         move2_game {
-            if-layers = <16 8>;
+            if-layers = <16 9>;
             then-layer = <17>;
         };
     };
