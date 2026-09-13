@@ -414,6 +414,18 @@
 
             tapping-term-ms = <150>;
         };
+
+        Shift_Mov: Shift_Mov {
+            compatible = "zmk,behavior-hold-tap";
+            label = "SHIFT_MOV";
+            bindings = <&mo>, <&sk>;
+
+            #binding-cells = <2>;
+            flavor = "balanced";
+            tapping-term-ms = <150>;
+            quick-tap-ms = <0>;
+            require-prior-idle-ms = <0>;
+        };
     };
 
     keymap {
@@ -424,10 +436,10 @@
         sunstone_code {
             label = "Base";
             bindings = <
-             &kp V                 &kp D  &kp L                        &kp W      &kp G      &kp COMMA  &kp F  &adaptive_u        &adaptive_o  &adaptive_y
-             &kp S                 &kp T  &kp R                        &magic     &kp M      &kp B      &kp N  &adaptive_i        &kp A        &kp H
-&Shift_CAPS  &Left_ALT LEFT_ALT Q  &kp J  &kp X                        &kp C      &kp SQT    &kp K      &kp P  &kp DOT            &kp SEMI     &Right_ALT RIGHT_ALT Z  &sk RIGHT_SHIFT
-                                          &backspace_ctrl 0 BACKSPACE  &kp SPACE  &MOV       &sl 9      &kp E  &kp LC(BACKSPACE)
+             &kp V                 &kp D  &kp L                        &kp W      &kp G                      &kp COMMA  &kp F  &adaptive_u        &adaptive_o  &adaptive_y
+             &kp S                 &kp T  &kp R                        &magic     &kp M                      &kp B      &kp N  &adaptive_i        &kp A        &kp H
+&Shift_CAPS  &Left_ALT LEFT_ALT Q  &kp J  &kp X                        &kp C      &kp SQT                    &kp K      &kp P  &kp DOT            &kp SEMI     &Right_ALT RIGHT_ALT Z  &sk RIGHT_SHIFT
+                                          &backspace_ctrl 0 BACKSPACE  &kp SPACE  &Shift_Mov 8 LEFT_SHIFT    &sl 9      &kp E  &kp LC(BACKSPACE)
             >;
         };
 
