@@ -532,9 +532,9 @@
         Special_Characters {
             label = "SYM";
             bindings = <
-        &kp GRAVE          &kp AT_SIGN        &kp HASH         &kp EXCLAMATION       &none             &kp AMPERSAND  &kp QUESTION      &kp FSLH        &kp DOLLAR  &kp CARET
+        &kp GRAVE          &kp AT_SIGN        &kp HASH         &kp EXCLAMATION       &kp TILDE         &kp AMPERSAND  &kp QUESTION      &kp FSLH        &kp DOLLAR  &kp CARET
         &kp PERCENT        &kp LEFT_BRACKET   &kp LEFT_BRACE   &kp LEFT_PARENTHESIS  &kp UNDERSCORE    &kp EQUAL      &kp ASTERISK      &adaptive_rpar  &kp PLUS    &kp MINUS
-&trans  &kp DOUBLE_QUOTES  &kp RIGHT_BRACKET  &kp RIGHT_BRACE  &kp LGUI              &kp TILDE         &kp LESS_THAN  &kp GREATER_THAN  &kp BSLH        &kp COLON   &none      &kp PIPE
+&trans  &kp DOUBLE_QUOTES  &kp RIGHT_BRACKET  &kp RIGHT_BRACE  &kp LGUI              &none             &kp LESS_THAN  &kp GREATER_THAN  &kp BSLH        &kp COLON   &none      &kp PIPE
                                               &trans           &trans                &trans            &trans         &trans            &trans
             >;
         };
