@@ -103,13 +103,6 @@
             timeout-ms = <30>;
             layers = <2 4 3 5>;
         };
-
-        Ctrl+Space {
-            bindings = <&kp LC(SPACE)>;
-            key-positions = <6 7>;
-            layers = <0 1 8 9>;
-            timeout-ms = <30>;
-        };
     };
 
     macros {
