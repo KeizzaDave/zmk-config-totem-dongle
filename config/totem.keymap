@@ -400,9 +400,9 @@
             };
         };
 
-        backspace_ctrl: backspace_ctrl {
+        Backspace_Shortuct: Backspace_Shortuct {
             compatible = "zmk,behavior-hold-tap";
-            label = "BACKSPACE_CTRL";
+            label = "BACKSPACE_SHORTUCT";
             bindings = <&shortcut>, <&kp>;
 
             #binding-cells = <2>;
@@ -422,16 +422,17 @@
             tapping-term-ms = <150>;
         };
 
-        Shift_Mov: Shift_Mov {
+        MAC_Backspace_Shortcut: MAC_Backspace_Shortcut {
             compatible = "zmk,behavior-hold-tap";
-            label = "SHIFT_MOV";
-            bindings = <&mo>, <&sk>;
+            label = "MAC_BACKSPACE_SHORTCUT";
+            bindings = <&mac_shortcut>, <&kp>;
 
             #binding-cells = <2>;
             flavor = "balanced";
-            tapping-term-ms = <200>;
-            quick-tap-ms = <150>;
+            tapping-term-ms = <400>;
+            quick-tap-ms = <175>;
             require-prior-idle-ms = <125>;
+            retro-tap;
         };
     };
 
@@ -443,20 +444,20 @@
         sunstone_code {
             label = "Base";
             bindings = <
-             &kp V                 &kp D  &kp L                        &kp W      &kp G      &kp COMMA  &kp F  &adaptive_u        &adaptive_o  &adaptive_y
-             &kp S                 &kp T  &kp R                        &magic     &kp M      &kp B      &kp N  &adaptive_i        &kp A        &kp H
-&Shift_CAPS  &Left_ALT LEFT_ALT Q  &kp J  &kp X                        &kp C      &kp SQT    &kp K      &kp P  &kp DOT            &kp SEMI     &Right_ALT RIGHT_ALT Z  &sk RIGHT_SHIFT
-                                          &backspace_ctrl 0 BACKSPACE  &kp SPACE  &MOV       &sl 9      &kp E  &kp LC(BACKSPACE)
+             &kp V                 &kp D  &kp L                            &kp W      &kp G      &kp COMMA  &kp F  &adaptive_u        &adaptive_o  &adaptive_y
+             &kp S                 &kp T  &kp R                            &magic     &kp M      &kp B      &kp N  &adaptive_i        &kp A        &kp H
+&Shift_CAPS  &Left_ALT LEFT_ALT Q  &kp J  &kp X                            &kp C      &kp SQT    &kp K      &kp P  &kp DOT            &kp SEMI     &Right_ALT RIGHT_ALT Z  &sk RIGHT_SHIFT
+                                          &Backspace_Shortuct 0 BACKSPACE  &kp SPACE  &MOV       &sl 9      &kp E  &kp LC(BACKSPACE)
             >;
         };
 
         BaseMac {
             label = "Mac";
             bindings = <
-             &kp V                 &kp D  &kp L                        &kp W      &kp G      &kp COMMA  &kp F  &adaptive_u        &adaptive_o  &adaptive_y
-             &kp S                 &kp T  &kp R                        &magic     &kp M      &kp B      &kp N  &adaptive_i        &kp A        &kp H
-&Shift_CAPS  &Left_ALT LEFT_ALT Q  &kp J  &kp X                        &kp C      &kp SQT    &kp K      &kp P  &kp DOT            &kp SEMI     &Right_ALT RIGHT_ALT Z  &sk RIGHT_SHIFT
-                                          &backspace_ctrl 0 BACKSPACE  &kp SPACE  &MOV       &sl 9      &kp E  &kp LA(BACKSPACE)
+             &kp V                 &kp D  &kp L                                &kp W      &kp G      &kp COMMA  &kp F  &adaptive_u        &adaptive_o  &adaptive_y
+             &kp S                 &kp T  &kp R                                &magic     &kp M      &kp B      &kp N  &adaptive_i        &kp A        &kp H
+&Shift_CAPS  &Left_ALT LEFT_ALT Q  &kp J  &kp X                                &kp C      &kp SQT    &kp K      &kp P  &kp DOT            &kp SEMI     &Right_ALT RIGHT_ALT Z  &sk RIGHT_SHIFT
+                                          &MAC_Backspace_Shortcut 0 BACKSPACE  &kp SPACE  &MOV       &sl 9      &kp E  &kp LA(BACKSPACE)
             >;
         };
 
